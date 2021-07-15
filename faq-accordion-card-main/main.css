@@ -1,0 +1,115 @@
+:root{
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    --light-grayish-blue: hsl(240, 5%, 91%);
+
+    --soft-red: hsl(14, 88%, 65%);
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul, li{
+    list-style-type: none;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(175,103,233,1);
+    background: -moz-linear-gradient(top, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+    background: -o-linear-gradient(top, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+    background: -ms-linear-gradient(top, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+    background: linear-gradient(to bottom, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+}
+
+.card{
+    margin: 20px;
+    display: flex;
+    position: relative;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.box-image{
+    left: 0;
+    top: 40%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.ilustration{
+    padding: 50px 20px;
+    overflow: hidden;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 900px;
+    background-position: -500px -270px;
+}
+
+.ilustration img{
+    margin-left: -100px;
+}
+
+.content{
+    padding: 50px;
+}
+
+.content > h1{
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.questions{
+    margin: 25px 0;
+}
+
+.question{
+    color: var(--dark-grayish-blue);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.question:hover{
+    cursor: pointer;
+    color: var(--soft-red);
+}
+
+.question span{
+    display: block;
+    margin-right: 70px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.attribution {
+    color: white;
+    left: 50%;
+    bottom: 5px;
+    position: absolute;
+    transform: translateX(-50%);
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
