@@ -1,0 +1,149 @@
+:root{
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Inter', cursive;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,body{
+    min-height: 100vh;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--very-dark-blue);
+}
+
+img{
+    display: block;
+}
+
+
+@media screen and (max-width: 1110px){
+
+    .container{
+        max-width: 540px !important;
+        max-height: unset !important;
+        grid-template-areas:
+            "image"
+            "hero" !important;
+
+        
+        .hero{
+            padding: 52px 71px !important;
+            text-align: center;
+
+            .stats{
+                margin: auto;
+                flex-direction: column;
+
+                .stats-item{
+                    margin: 15px auto;
+                }
+
+            }
+
+        }
+
+    }
+    
+
+}
+
+.container{
+    color: white;
+    margin: 30px auto;
+    max-width: 1110px;
+    max-height: 446px;
+    display: grid;
+    grid-template-areas: "hero image";
+    grid-template-rows: 446px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--dark-blue);
+
+    .hero{
+        grid-area: hero;
+        padding: 72px 110px 72px 72px;
+
+        .title{
+            font-size: 2.4rem;
+            font-weight: 700;
+
+            span{
+                color: var(--soft-violet);
+                font-size: inherit;
+            }
+
+        }
+
+        .description{
+            color: hsla(0, 0%, 100%, 0.75);
+            margin: 25px 0 65px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .stats{
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .stats-item{
+
+                .amount{
+                    margin: 7px 0;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                }
+
+                .name{
+                    color: hsla(0, 0%, 100%, 0.6);
+                    font-size: 0.8rem;
+                    font-family: 'Lexend Deca', cursive;
+                    letter-spacing: 1px;
+                }
+
+            }
+
+        }
+
+    }
+
+    .image{
+        grid-area: image;
+        background-color: #aa5cdb;
+
+        img{
+            opacity: 75%;
+            mix-blend-mode: multiply;
+        }
+
+    }
+
+}
+
+.attribution {
+    color: white;
+    margin: 10px auto;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 1px;
+
+    a {
+        color: var(--soft-violet);
+    }
+
+}

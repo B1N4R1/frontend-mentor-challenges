@@ -1,0 +1,150 @@
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  font-family: 'Inter', cursive;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--very-dark-blue);
+}
+
+img {
+  display: block;
+}
+
+@media screen and (max-width: 1110px) {
+  .container {
+    max-width: 540px !important;
+    max-height: unset !important;
+        grid-template-areas: "image" "hero" !important;
+  }
+  .container .hero {
+    padding: 52px 71px !important;
+    text-align: center;
+  }
+  .container .hero .stats {
+    margin: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .hero .stats .stats-item {
+    margin: 15px auto;
+  }
+}
+
+.container {
+  color: white;
+  margin: 30px auto;
+  max-width: 1110px;
+  max-height: 446px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "hero image";
+  -ms-grid-rows: 446px;
+      grid-template-rows: 446px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--dark-blue);
+}
+
+.container .hero {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hero;
+  padding: 72px 110px 72px 72px;
+}
+
+.container .hero .title {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.container .hero .title span {
+  color: var(--soft-violet);
+  font-size: inherit;
+}
+
+.container .hero .description {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 25px 0 65px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.container .hero .stats {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .hero .stats .stats-item .amount {
+  margin: 7px 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.container .hero .stats .stats-item .name {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  font-family: 'Lexend Deca', cursive;
+  letter-spacing: 1px;
+}
+
+.container .image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: image;
+  background-color: #aa5cdb;
+}
+
+.container .image img {
+  opacity: 75%;
+  mix-blend-mode: multiply;
+}
+
+.attribution {
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.attribution a {
+  color: var(--soft-violet);
+}
