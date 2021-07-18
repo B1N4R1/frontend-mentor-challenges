@@ -1,0 +1,127 @@
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+@media screen and (max-width: 926px){
+
+    .container{
+        max-width: 326px !important;
+        flex-direction: column !important;
+
+        .col{
+
+            p{
+                margin: 0 0 21px !important;
+            }
+
+            &:nth-child(1){
+                border-radius: 10px 10px 0 0 !important;
+            }
+        
+            &:nth-child(3){
+                border-radius: 0 0 10px 10px !important;
+            }
+
+        }
+
+    }
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+html,body{
+    min-height: 100vh;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-light-gray);
+}
+
+.container{
+    margin: 20px;
+    max-height: 100%;
+    max-width: 926px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+
+    .col{
+        color: var(--transparent-white);
+        padding: 47px;
+
+        &:nth-child(1){
+            border-radius: 10px 0 0 10px;
+            background-color: var(--bright-orange);
+        }
+    
+        &:nth-child(2){
+            background-color: var(--dark-cyan);
+        }
+    
+        &:nth-child(3){
+            border-radius: 0 10px 10px 0;
+            background-color: var(--very-dark-cyan);
+        }
+
+        h1{
+            color: var(--very-light-gray);
+            margin: 24px 0;
+            font-size: 2.7rem;
+            font-family: 'Big Shoulders Display', cursive;
+        }
+
+        p{
+            margin: 0 0 81px;
+            line-height: 1.7;
+        }
+
+        .btn-more{
+            border: 0;
+            cursor: pointer;
+            outline: none;
+            padding: 15px 34px;
+            border: 1px solid transparent;
+            border-radius: 30px;
+            transition: all .3s ease;
+            mix-blend-mode: screen;
+            background-color: var(--very-light-gray);
+
+            &:hover{
+                color: var(--very-light-gray);
+                border: 1px solid var(--very-light-gray);
+                mix-blend-mode: unset;
+                background-color: transparent;
+            }
+
+        }
+
+    }
+
+}
+
+.attribution {
+    color: #333;
+    margin: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+
+}
