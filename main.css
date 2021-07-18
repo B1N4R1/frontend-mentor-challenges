@@ -52,6 +52,10 @@ a {
   overflow-y: scroll;
 }
 
+.challenges::-webkit-scrollbar{
+  display: none;
+}
+
 .challenges .challenge {
   margin: 48px 0 48px 32px;
   padding: 0 0 0 45px;
