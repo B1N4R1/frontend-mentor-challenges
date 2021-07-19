@@ -1,0 +1,173 @@
+:root{
+    --html-color: #EC652A;
+    --css-color: #38A8E0;
+    --js-color: #FFD839;
+    --html-color-darker: #d5421a;
+    --css-color-darker: #1E8BC1;
+    --js-color-darker: #DAB92E;
+
+    --progress-height: 24px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+html,body{
+    min-height: 100%;
+}
+
+body{
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) no-repeat center center/cover;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+}
+
+ul,li{
+    list-style-type: none;
+}
+
+@media screen and (max-width: 777px){
+
+    .container .challenges .challenge{
+        margin: 30px auto;
+    }
+
+}
+
+
+.container{
+    color: white;
+    padding: 37.5px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+        letter-spacing: 0.05em;
+    }
+
+}
+
+.challenges{
+    width: 90%;
+    // max-height: 80vh;
+    // overflow-y: scroll;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat((auto-fit, minmax(350px, 1fr)));
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    .challenge{
+        margin: 30px;
+        max-width: 383px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: -4px 4px 0 rgba(51, 51, 51, 0.25);
+
+        &.completed .caption::after{
+            background-color: #ACD847;
+        }
+
+        &.in-progress .caption::after{
+            background-color: #F1B604;
+        }
+
+        .caption{
+            height: 205px;
+            overflow: hidden;
+            position: relative;
+
+            img{
+                width: 100%;
+                height: 100%;
+                transition: all .5s ease;
+                backface-visibility: hidden;
+            }
+
+            &:hover img{
+                transform: scale(1.05);
+            }
+
+            &::after{
+                content: attr(data-progress);
+                top: 0;
+                right: 0;
+                height: var(--progress-height);
+                margin: 10px;
+                padding: 0 10px;
+                position: absolute;
+                border-radius: calc(var(--progress-height) / 2);
+                font-size: 1rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                
+            }
+
+        }
+
+        .hero{
+            padding: 15px;
+            background-color: white;
+
+            a{
+                color: #333333;
+                font-size: 1.5rem;
+                text-decoration-color: #333333;
+            }
+
+            .languages{
+                margin: 10px 0;
+                display: grid;
+                grid-gap: 15px;
+                grid-template-columns: repeat(auto-fill, minmax(60px, 60px));
+
+                .language{
+                    font-size: 1.125rem;
+                    text-align: center;
+                    border-radius: 5px;
+
+                    &.hide{
+                        visibility: hidden;
+                    }
+
+                    &.html{
+                        box-shadow: 0px 4px 0px var(--html-color-darker);
+                        background-color: var(--html-color);
+                    }
+                    &.css{
+                        box-shadow: 0px 4px 0px var(--css-color-darker);
+                        background-color: var(--css-color);
+                    }
+                    &.js{
+                        box-shadow: 0px 4px 0px var(--js-color-darker);
+                        background-color: var(--js-color);
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

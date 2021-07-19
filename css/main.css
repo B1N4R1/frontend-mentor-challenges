@@ -1,0 +1,184 @@
+:root {
+  --html-color: #EC652A;
+  --css-color: #38A8E0;
+  --js-color: #FFD839;
+  --html-color-darker: #d5421a;
+  --css-color-darker: #1E8BC1;
+  --js-color-darker: #DAB92E;
+  --progress-height: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Baloo 2', cursive;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff1eb), to(#ace0f9)) no-repeat center center/cover;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) no-repeat center center/cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 777px) {
+  .container .challenges .challenge {
+    margin: 30px auto;
+  }
+}
+
+.container {
+  color: white;
+  padding: 37.5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.05em;
+}
+
+.challenges {
+  width: 90%;
+  margin: 20px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.challenges::-webkit-scrollbar {
+  display: none;
+}
+
+.challenges .challenge {
+  margin: 30px;
+  max-width: 383px;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-box-shadow: -4px 4px 0 rgba(51, 51, 51, 0.25);
+          box-shadow: -4px 4px 0 rgba(51, 51, 51, 0.25);
+}
+
+.challenges .challenge.completed .caption::after {
+  background-color: #ACD847;
+}
+
+.challenges .challenge.in-progress .caption::after {
+  background-color: #F1B604;
+}
+
+.challenges .challenge .caption {
+  height: 205px;
+  overflow: hidden;
+  position: relative;
+}
+
+.challenges .challenge .caption img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.challenges .challenge .caption:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.challenges .challenge .caption::after {
+  content: attr(data-progress);
+  top: 0;
+  right: 0;
+  height: var(--progress-height);
+  margin: 10px;
+  padding: 0 10px;
+  position: absolute;
+  border-radius: calc(var(--progress-height) / 2);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.challenges .challenge .hero {
+  padding: 15px;
+  background-color: white;
+}
+
+.challenges .challenge .hero a {
+  color: #333333;
+  font-size: 1.5rem;
+  -webkit-text-decoration-color: #333333;
+          text-decoration-color: #333333;
+}
+
+.challenges .challenge .hero .languages {
+  margin: 10px 0;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+  -ms-grid-columns: (minmax(60px, 60px))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(60px, 60px));
+}
+
+.challenges .challenge .hero .languages .language {
+  font-size: 1.125rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.challenges .challenge .hero .languages .language.hide {
+  visibility: hidden;
+}
+
+.challenges .challenge .hero .languages .language.html {
+  -webkit-box-shadow: 0px 4px 0px var(--html-color-darker);
+          box-shadow: 0px 4px 0px var(--html-color-darker);
+  background-color: var(--html-color);
+}
+
+.challenges .challenge .hero .languages .language.css {
+  -webkit-box-shadow: 0px 4px 0px var(--css-color-darker);
+          box-shadow: 0px 4px 0px var(--css-color-darker);
+  background-color: var(--css-color);
+}
+
+.challenges .challenge .hero .languages .language.js {
+  -webkit-box-shadow: 0px 4px 0px var(--js-color-darker);
+          box-shadow: 0px 4px 0px var(--js-color-darker);
+  background-color: var(--js-color);
+}
