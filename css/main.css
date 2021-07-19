@@ -135,6 +135,7 @@ ul, li {
 }
 
 .challenges .challenge .hero {
+  height: 100%;
   padding: 15px;
   background-color: white;
 }
