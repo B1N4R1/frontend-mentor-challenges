@@ -69,7 +69,11 @@ function createChallengeCard(challenge){
         let linkName = link.toLowerCase().replace(" ", "-");
         const linkANCHOR = document.createElement("a");
         linkANCHOR.setAttribute("href", `${challenge[linkName]}`);
-        linkANCHOR.setAttribute("target", "_blank");
+
+        if (challenge[linkName] != '#') {
+            linkANCHOR.setAttribute("target", "_blank");
+        }
+
         linkANCHOR.setAttribute("class", "link-name");
         linkANCHOR.innerText = link;
 
