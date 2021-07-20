@@ -37,13 +37,13 @@ ul,li{
     list-style-type: none;
 }
 
-@media screen and (max-width: 777px){
+// @media screen and (max-width: 777px){
 
-    .container .challenges .challenge{
-        margin: 30px auto;
-    }
+//     .container .challenges .challenge{
+//         margin: 30px auto;
+//     }
 
-}
+// }
 
 
 .container{
@@ -70,15 +70,17 @@ ul,li{
     // overflow-y: scroll;
     margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat((auto-fit, minmax(350px, 1fr)));
+    grid-gap: 60px;
+    justify-content: center;
+    grid-template-columns: repeat((auto-fit, minmax(300px, 380px)));
 
     &::-webkit-scrollbar{
         display: none;
     }
 
     .challenge{
-        margin: 30px;
-        max-width: 383px;
+        // margin: 30px;
+        // max-width: 383px;
         overflow: hidden;
         border-radius: 10px;
         box-shadow: -4px 4px 0 rgba(51, 51, 51, 0.25);
@@ -125,7 +127,7 @@ ul,li{
         }
 
         .hero{
-            height: 115px;
+            //height: 115px;
             padding: 15px;
             background-color: white;
 

@@ -38,12 +38,6 @@ ul, li {
   list-style-type: none;
 }
 
-@media screen and (max-width: 777px) {
-  .container .challenges .challenge {
-    margin: 30px auto;
-  }
-}
-
 .container {
   color: white;
   padding: 37.5px 0;
@@ -75,8 +69,12 @@ ul, li {
   margin: 20px auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(300px, 380px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 380px));
 }
 
 .challenges::-webkit-scrollbar {
@@ -84,8 +82,6 @@ ul, li {
 }
 
 .challenges .challenge {
-  margin: 30px;
-  max-width: 383px;
   overflow: hidden;
   border-radius: 10px;
   -webkit-box-shadow: -4px 4px 0 rgba(51, 51, 51, 0.25);
@@ -135,7 +131,6 @@ ul, li {
 }
 
 .challenges .challenge .hero {
-  height: 115px;
   padding: 15px;
   background-color: white;
 }
