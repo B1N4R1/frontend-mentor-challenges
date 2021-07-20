@@ -125,13 +125,14 @@ ul,li{
         }
 
         .hero{
-            height: 100%;
+            height: 115px;
             padding: 15px;
             background-color: white;
 
             a{
                 color: #333333;
                 font-size: 1.5rem;
+                white-space: nowrap;
                 text-decoration-color: #333333;
             }
 
