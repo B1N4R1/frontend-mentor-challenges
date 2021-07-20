@@ -20,20 +20,23 @@ function createChallengeCard(challenge){
     mainDIV.setAttribute("class", `challenge ${challenge["progress"].replace(" ", "-").toLowerCase()}`);
     mainDIV.setAttribute("data-position", `${challenge["id"]}`);
 
-    const captionDIV = document.createElement("div");
-    captionDIV.setAttribute("class", "caption");
-    captionDIV.setAttribute("data-progress", `${challenge["progress"]}`);
+    const captionANCHOR = document.createElement("a");
+    captionANCHOR.setAttribute("href", `${challenge["liveSite"]}`);
+    captionANCHOR.setAttribute("target", "_blank");
+    captionANCHOR.setAttribute("class", "caption");
+    captionANCHOR.setAttribute("data-progress", `${challenge["progress"]}`);
 
     const captionIMG = document.createElement("img");
     captionIMG.setAttribute("src", `images/challenge-${challenge["id"]}.jpeg`);
     
-    captionDIV.appendChild(captionIMG);
+    captionANCHOR.appendChild(captionIMG);
 
     const heroDIV = document.createElement("div");
     heroDIV.setAttribute("class", "hero");
 
     const heroANCHOR = document.createElement("a");
-    heroANCHOR.setAttribute("href", `${challenge["liveSite"]}`)
+    heroANCHOR.setAttribute("href", `${challenge["liveSite"]}`);
+    heroANCHOR.setAttribute("target", "_blank");
     heroANCHOR.innerText = challenge["title"];
 
     const heroUL = document.createElement("ul");
@@ -54,7 +57,7 @@ function createChallengeCard(challenge){
     heroDIV.appendChild(heroANCHOR);
     heroDIV.appendChild(heroUL);
 
-    mainDIV.appendChild(captionDIV);
+    mainDIV.appendChild(captionANCHOR);
     mainDIV.appendChild(heroDIV);
 
     return mainDIV;

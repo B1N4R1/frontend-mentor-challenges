@@ -27,6 +27,7 @@ body {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -98,6 +99,7 @@ ul, li {
 
 .challenges .challenge .caption {
   height: 205px;
+  display: block;
   overflow: hidden;
   position: relative;
 }
