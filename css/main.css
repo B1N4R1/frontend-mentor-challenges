@@ -155,6 +155,7 @@ ul, li {
 }
 
 .challenges .challenge .hero .languages .language {
+  cursor: default;
   font-size: 1.125rem;
   text-align: center;
   border-radius: 5px;
@@ -170,16 +171,37 @@ ul, li {
   background-color: var(--html-color);
 }
 
+.challenges .challenge .hero .languages .language.html:hover {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0px 2px 0px var(--html-color-darker);
+          box-shadow: 0px 2px 0px var(--html-color-darker);
+}
+
 .challenges .challenge .hero .languages .language.css {
   -webkit-box-shadow: 0px 4px 0px var(--css-color-darker);
           box-shadow: 0px 4px 0px var(--css-color-darker);
   background-color: var(--css-color);
 }
 
+.challenges .challenge .hero .languages .language.css:hover {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0px 2px 0px var(--css-color-darker);
+          box-shadow: 0px 2px 0px var(--css-color-darker);
+}
+
 .challenges .challenge .hero .languages .language.js {
   -webkit-box-shadow: 0px 4px 0px var(--js-color-darker);
           box-shadow: 0px 4px 0px var(--js-color-darker);
   background-color: var(--js-color);
+}
+
+.challenges .challenge .hero .languages .language.js:hover {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0px 2px 0px var(--js-color-darker);
+          box-shadow: 0px 2px 0px var(--js-color-darker);
 }
 
 .challenges .challenge .links {

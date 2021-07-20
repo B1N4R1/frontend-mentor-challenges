@@ -135,6 +135,7 @@ ul,li{
                 grid-template-columns: repeat(auto-fill, minmax(60px, 60px));
 
                 .language{
+                    cursor: default;
                     font-size: 1.125rem;
                     text-align: center;
                     border-radius: 5px;
@@ -146,14 +147,34 @@ ul,li{
                     &.html{
                         box-shadow: 0px 4px 0px var(--html-color-darker);
                         background-color: var(--html-color);
+
+                        &:hover{
+                            transform: translateY(2px);
+                            box-shadow: 0px 2px 0px var(--html-color-darker);
+                        }
+
                     }
+
                     &.css{
                         box-shadow: 0px 4px 0px var(--css-color-darker);
                         background-color: var(--css-color);
+
+                        &:hover{
+                            transform: translateY(2px);
+                            box-shadow: 0px 2px 0px var(--css-color-darker);
+                        }
+
                     }
+
                     &.js{
                         box-shadow: 0px 4px 0px var(--js-color-darker);
                         background-color: var(--js-color);
+
+                        &:hover{
+                            transform: translateY(2px);
+                            box-shadow: 0px 2px 0px var(--js-color-darker);
+                        }
+
                     }
 
                 }
