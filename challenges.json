@@ -28,15 +28,15 @@
     "3": {
         "id": 3,
         "title": "FAQ Accordion Card",
-        "progress": "In progress",
+        "progress": "Completed",
         "languages": {
             "html": true,
             "css": true,
             "js": true
         },
-        "github": "#",
-        "frontend-mentor": "#",
-        "live-site": "#"
+        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/faq-accordion-card-main",
+        "frontend-mentor": "https://www.frontendmentor.io/solutions/faq-accordion-card-eBiUUGpID",
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/faq-accordion-card-main"
     },
     "4": {
         "id": 4,
