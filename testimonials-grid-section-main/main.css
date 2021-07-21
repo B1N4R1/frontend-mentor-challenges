@@ -103,11 +103,11 @@ body{
 
     #box4{ 
         grid-area: box4; 
-        background-color: var(--clr-veryDarkBlackishBlue); 
     }
 
     #box5{ 
-        grid-area: box5; 
+        grid-area: box5;
+        background-color: var(--clr-veryDarkBlackishBlue);
     }
 
 .testimonial.testimonial-light .avatar .name,
