@@ -10,7 +10,7 @@
         },
         "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/room-homepage-master",
         "frontend-mentor": "https://www.frontendmentor.io/solutions/room-homepage-6Fb7kcD8z",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/room-homepage-master"
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/room-homepage-master"
     },
     "2": {
         "id": 2,
@@ -23,7 +23,7 @@
         },
         "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/profile-card-component-main",
         "frontend-mentor": "https://www.frontendmentor.io/solutions/profile-card-component-with-html-and-css-NhzrIPBca",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/profile-card-component-main"
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/profile-card-component-main"
     },
     "3": {
         "id": 3,
@@ -36,7 +36,7 @@
         },
         "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/faq-accordion-card-main",
         "frontend-mentor": "https://www.frontendmentor.io/solutions/faq-accordion-card-eBiUUGpID",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/faq-accordion-card-main"
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/faq-accordion-card-main"
     },
     "4": {
         "id": 4,
@@ -49,7 +49,7 @@
         },
         "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/article-preview-component-master",
         "frontend-mentor": "https://www.frontendmentor.io/solutions/responsive-article-card-component-gZ0k0E3LC",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/article-preview-component-master"
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/article-preview-component-master"
     },
     "5": {
         "id": 5,
@@ -62,7 +62,7 @@
         },
         "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/testimonials-grid-section-main",
         "frontend-mentor": "https://www.frontendmentor.io/solutions/testimonials-grid-section-Z9pFrTB22",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/testimonials-grid-section-main/"
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/testimonials-grid-section-main/"
     },
     "6": {
         "id": 6,
@@ -75,7 +75,7 @@
         },
         "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/single-price-grid-component-master",
         "frontend-mentor": "https://www.frontendmentor.io/solutions/single-price-component-TyiWP9rnC",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/single-price-grid-component-master"
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/single-price-grid-component-master"
     },
     "7": {
         "id": 7,
@@ -88,7 +88,7 @@
         },
         "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/3-column-preview-card-component-main",
         "frontend-mentor": "https://www.frontendmentor.io/solutions/3-column-card-component-JuVBYmhYs",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/3-column-preview-card-component-main"
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/3-column-preview-card-component-main"
     },
     "8": {
         "id": 8,
@@ -101,6 +101,6 @@
         },
         "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/stats-preview-card-component-main",
         "frontend-mentor": "https://www.frontendmentor.io/solutions/stats-card-component-ZrqI6no1Y",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/stats-preview-card-component-main"
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/stats-preview-card-component-main"
     }
 }
