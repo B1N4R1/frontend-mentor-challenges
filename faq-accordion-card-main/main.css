@@ -156,6 +156,19 @@ ul, li{
     font-weight: 400;
 }
 
+.question img{
+    transition: transform .25s ease-in;
+}
+
+.questions li[data-active="1"] .question > h1{
+    color: black;
+    font-weight: 700;
+}
+
+.questions li[data-active="1"] .question img{
+    transform: rotate(180deg);
+}
+
 .answer{
     display: none;
     overflow: hidden;
