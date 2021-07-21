@@ -54,15 +54,15 @@
     "5": {
         "id": 5,
         "title": "Testimonials Grid Section",
-        "progress": "In progress",
+        "progress": "Completed",
         "languages": {
             "html": true,
             "css": true,
             "js": false
         },
-        "github": "#",
-        "frontend-mentor": "#",
-        "live-site": "#"
+        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/testimonials-grid-section-main",
+        "frontend-mentor": "https://www.frontendmentor.io/solutions/testimonials-grid-section-Z9pFrTB22",
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/testimonials-grid-section-main/"
     },
     "6": {
         "id": 6,
