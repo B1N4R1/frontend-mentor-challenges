@@ -15,59 +15,47 @@
 }
 
 body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 
 /*? LAYOUT */
 
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .main{
     max-width: 1400px;
     display: grid;
-    grid-template-columns: 2fr 0.7fr;
-    grid-template-areas: "left right"
-                         "left right";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "box1 box1 box2 box3"
+                         "box4 box5 box5 box3";
 }
 
-.left{
-    display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "top-left-1 top-left-1 top-left-2"
-                         "bottom-left-1 bottom-left-2 bottom-left-2";
-    grid-area: left;
-}
-  
-.left > div:nth-child(1){
-    grid-area: top-left-1;
-    background-color: var(--clr-modarateViolet);
+
+@media screen and (max-width: 1100px){
+
+    .container .main{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "box1 box1 box2"
+                             "box4 box5 box5"
+                             "box3 box3 box3";
+    }
+
 }
 
-.left > div:nth-child(2){
-    grid-area: top-left-2;
-    background-color: var(--clr-veryDarkGrayishBlue);
-}
+@media screen and (max-width: 675px){
 
-.left > div:nth-child(3){
-    grid-area: bottom-left-1;
-    background-color: var(--clr-white);
-}
+    .container .main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "box1" "box2" "box3" "box4" "box5";
+    }
 
-.left > div:nth-child(4){
-    grid-area: bottom-left-2;
-    background-color: var(--clr-veryDarkBlackishBlue);
-}
-
-.right{
-    display: grid;
-    grid-area: right;
-}
-.right div{
-    background-color: var(--clr-white);
 }
 
 
@@ -80,12 +68,47 @@ body{
     -webkit-box-shadow: 0px 0px 20px 5px rgba(85,85,85,0.2);
     -moz-box-shadow: 0px 0px 20px 5px rgba(85,85,85,0.2);
     box-shadow: 0px 0px 20px 5px rgba(85,85,85,0.2);
+    background-color: var(--clr-white);
 }
 
-.testimonial.top-left{ background-color: var(--clr-modarateViolet); }
-.testimonial.top-right{ background-color: var(--clr-veryDarkGrayishBlue); }
-.testimonial.bottom-right{ background-color: var(--clr-white); }
-.testimonial.bottom-left{ background-color: var(--clr-veryDarkBlackishBlue); }
+    #box1{
+        position: relative;
+        grid-area: box1;
+        background-color: var(--clr-modarateViolet); 
+    }
+
+        #box1::before{
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url("images/bg-pattern-quotation.svg") no-repeat 100px 100px;
+            background-position: 90% 0;
+        }
+
+        #box1 * {
+            position: relative;
+        }
+
+    #box2{ 
+        grid-area: box2; 
+        background-color: var(--clr-veryDarkGrayishBlue); 
+    }
+
+    #box3{
+        grid-area: box3;
+    }
+
+    #box4{ 
+        grid-area: box4; 
+        background-color: var(--clr-veryDarkBlackishBlue); 
+    }
+
+    #box5{ 
+        grid-area: box5; 
+    }
 
 .testimonial.testimonial-light .avatar .name,
 .testimonial.testimonial-light .avatar .verified,
@@ -107,11 +130,11 @@ body{
     border-radius: 50%;
 }
 
-    .testimonial.top-left .photo{ background: url("images/image-daniel.jpg") no-repeat center center/cover; }
-    .testimonial.top-right .photo{ background: url("images/image-jonathan.jpg") no-repeat center center/cover; }
-    .testimonial.bottom-left .photo{ background: url("images/image-jeanette.jpg") no-repeat center center/cover; }
-    .testimonial.bottom-right .photo{ background: url("images/image-patrick.jpg") no-repeat center center/cover; }
-    .right .testimonial .photo{ background: url("images/image-kira.jpg") no-repeat center center/cover; }
+    #box1 .avatar .photo{ background: url("images/image-daniel.jpg") no-repeat center center/cover; }
+    #box2 .avatar .photo{ background: url("images/image-jonathan.jpg") no-repeat center center/cover; }
+    #box3 .avatar .photo{ background: url("images/image-kira.jpg") no-repeat center center/cover; }
+    #box4 .avatar .photo{ background: url("images/image-jeanette.jpg") no-repeat center center/cover; }
+    #box5 .avatar .photo{ background: url("images/image-patrick.jpg") no-repeat center center/cover; }
 
 
 .testimonial .avatar .name,
@@ -138,4 +161,17 @@ body{
     color: var(--clr-white);
     opacity: .7;
     font-size: .9rem;
+}
+
+/*? ATTRIBUTION */
+
+.attribution {
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.attribution a {
+    color: #3e52a3;
 }
