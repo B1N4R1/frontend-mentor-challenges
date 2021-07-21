@@ -1,0 +1,221 @@
+:root{
+    --main-bg: hsl(222, 26%, 31%);
+    --keypad-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+
+    --opt-keys-text: hsl(0, 0, 100%);
+    --opt-keys-bg: hsl(225, 21%, 49%);
+    --opt-keys-shadow: hsl(224, 28%, 35%);
+
+    --numeric-keys-text: hsl(221, 14%, 31%);
+    --numeric-keys-bg: hsl(30, 25%, 89%);
+    --numeric-keys-shadow: hsl(28, 16%, 65%);
+
+    --opt-key-text: hsl(0, 0, 100%);
+    --equal-key-bg: hsl(6, 63%, 50%);
+    --equal-key-shadow: hsl(6, 70%, 34%);
+
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: 'Spartan', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg);
+}
+
+.container{
+    width: 100%;
+    max-width: 540px;
+}
+
+.head{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+        font-weight: 600;
+    }
+
+    .theme{
+
+        p{
+            font-size: .4rem;
+        }
+
+    }
+
+}
+
+.calculator{
+
+    .screen{
+        color: white;
+        margin: 30px 0 24px;
+        padding: 36px;
+        font-size: 1.45rem;
+        text-align: right;
+        border-radius: 10px;
+        background-color: var(--screen-bg);
+    }
+
+    .keypad{
+        padding: 32px;
+        display: grid;
+        grid-gap: 25px;
+        grid-auto-rows: 60px;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-areas: "key7 key8 key9 del"
+                             "key4 key5 key6 add"
+                             "key1 key2 key3 minus"
+                             "dot key0 slash multiply"
+                             "reset reset equal equal";
+        border-radius: 10px;
+        background-color: var(--keypad-bg);
+
+        .key{
+            color: var(--numeric-keys-text);
+            cursor: pointer;
+            padding: 15px 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 0 0 var(--numeric-keys-shadow);
+            background-color: var(--numeric-keys-bg);
+
+            span{
+                font-weight: 700;
+            }
+
+            &:hover{
+                transform: translateY(2px);
+                box-shadow: 0 2px 0 0 var(--numeric-keys-shadow);
+            }
+
+            &.opt{
+                color: white;
+                background-color: var(--opt-keys-bg);
+                box-shadow: 0 4px 0 0 var(--opt-keys-shadow);
+
+                &:hover{
+                    transform: translateY(2px);
+                    box-shadow: 0 2px 0 0 var(--opt-keys-shadow);
+                }
+
+                span{
+                    font-size: .6rem;
+                    font-weight: 600;
+                }
+
+            }
+
+            &.equal{
+                color: white;
+                box-shadow: 0 4px 0 0 var(--equal-key-shadow);
+                background-color: var(--equal-key-bg);
+
+                &:hover{
+                    transform: translateY(2px);
+                    box-shadow: 0 2px 0 0 var(--equal-key-shadow);
+                }
+
+                span{
+                    font-size: .6rem;
+                    font-weight: 600;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+#key-0{
+    grid-area: key0;
+}
+
+#key-1{
+    grid-area: key1;
+}
+
+#key-2{
+    grid-area: key2;
+}
+
+#key-3{
+    grid-area: key3;
+}
+
+#key-4{
+    grid-area: key4;
+}
+
+#key-5{
+    grid-area: key5;
+}
+
+#key-6{
+    grid-area: key6;
+}
+
+#key-7{
+    grid-area: key7;
+}
+
+#key-8{
+    grid-area: key8;
+}
+
+#key-9{
+    grid-area: key9;
+}
+
+#key-dot{
+    grid-area: dot;
+}
+
+#key-slash{
+    grid-area: slash;
+}
+
+#key-add{
+    grid-area: add;
+}
+
+#key-minus{
+    grid-area: minus;
+}
+
+#key-multiply{
+    grid-area: multiply;
+}
+
+#key-reset{
+    grid-area: reset;
+}
+
+#key-del{
+    grid-area: del;
+}
+
+#key-equal{
+    grid-area: equal;
+}
+
