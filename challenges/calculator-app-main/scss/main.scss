@@ -12,6 +12,7 @@ body{
     min-height: 100vh;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     background-color: var(--main-bg);
 }
@@ -203,6 +204,19 @@ body.theme-3 .theme .toggle::after{
 
     }
 
+}
+
+.attribution {
+    color: var(--screen-text);
+    margin: 20px 0;
+    font-size: .5rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.attribution a {
+    color: inherit;
+    font-size: inherit;
 }
 
 #key0{

@@ -64,6 +64,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -283,6 +287,19 @@ body.theme-3 .theme .toggle::after {
 .calculator .keypad .key.equal span {
   font-size: .6rem;
   font-weight: 600;
+}
+
+.attribution {
+  color: var(--screen-text);
+  margin: 20px 0;
+  font-size: .5rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.attribution a {
+  color: inherit;
+  font-size: inherit;
 }
 
 #key0 {
