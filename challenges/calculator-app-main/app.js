@@ -26,19 +26,6 @@ $(".key").on("click", function(){
         localStorage.setItem("result", parseFloat(value.innerText));
 
         if (sign != "") {
-            
-            // if (sign == "+") {
-            //     result = parseFloat(result) + parseFloat(value.innerText);
-            // }
-            // else if (sign == "-") {
-            //     result = parseFloat(result) - parseFloat(value.innerText);
-            // }
-            // else if (sign == "x") {
-            //     result = parseFloat(result) * parseFloat(value.innerText);
-            // }
-            // else if (sign == "/") {
-            //     result = parseFloat(result) / parseFloat(value.innerText);
-            // }
 
             result = calculate(result, value.innerText, sign);
 
@@ -62,7 +49,22 @@ $(".key").on("click", function(){
 
     }
 
-    if(key_type == "equal"){
+    if (key_type == "del" && sign == "") {
+        
+        value.innerText = value.innerText.slice(0, -1);
+
+        //value.innerText = Math.floor(value.innerText / 10);
+
+        if (value.innerText == "") {
+            localStorage.setItem("result", -1);
+        }
+        else{
+            localStorage.setItem("result", value.innerText);
+        }
+
+    }
+
+    if(key_type == "equal" && screen.getAttribute("data-reset") == "0"){
 
         if (sign != "") {
             
@@ -83,6 +85,7 @@ $(".key").on("click", function(){
         value.innerText = result;
 
         screen.setAttribute("data-clear-operation", 1);
+        screen.setAttribute("data-reset", 1);
 
     }
 
@@ -92,6 +95,7 @@ $(".key").on("click", function(){
         operation.innerText = "";
 
         screen.setAttribute("data-sign", "");
+        screen.setAttribute("data-reset", 0);
         screen.setAttribute("data-clear-value", 0);
         screen.setAttribute("data-clear-operation", 0);
 
