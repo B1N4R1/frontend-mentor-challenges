@@ -1,22 +1,4 @@
-:root{
-    --main-bg: hsl(222, 26%, 31%);
-    --keypad-bg: hsl(223, 31%, 20%);
-    --screen-bg: hsl(224, 36%, 15%);
-
-    --opt-keys-text: hsl(0, 0, 100%);
-    --opt-keys-bg: hsl(225, 21%, 49%);
-    --opt-keys-shadow: hsl(224, 28%, 35%);
-
-    --numeric-keys-text: hsl(221, 14%, 31%);
-    --numeric-keys-bg: hsl(30, 25%, 89%);
-    --numeric-keys-shadow: hsl(28, 16%, 65%);
-
-    --opt-key-text: hsl(0, 0, 100%);
-    --equal-key-bg: hsl(6, 63%, 50%);
-    --equal-key-shadow: hsl(6, 70%, 34%);
-
-    --white: hsl(0, 0%, 100%);
-}
+@import './themes';
 
 *{
     margin: 0;
@@ -40,13 +22,28 @@ body{
     max-width: 540px;
 }
 
+body.theme-1 .theme .toggle::after{
+    transform: translateX(0px);
+}
+
+body.theme-2 .theme .toggle::after{
+    transform: translateX(20px);
+}
+
+body.theme-3 .theme .toggle::after{
+    transform: translateX(40px);
+}
+
 .head{
-    color: white;
     min-width: 380px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    & *{
+        color: var(--screen-text);
+    }
 
     .logo{
         font-weight: 600;
@@ -78,6 +75,7 @@ body{
                 height: 15px;
                 left: 8px;
                 transform: translateX(0px);
+                transition: transform .3s ease;
                 position: absolute;
                 border-radius: 50%;
                 background-color: var(--equal-key-bg);
@@ -88,7 +86,7 @@ body{
                 height: 15px;
                 cursor: pointer;
                 position: relative;
-                
+
                 &::after{
                     content: attr(data-theme);
                     top: -25px;
@@ -110,7 +108,7 @@ body{
     min-width: 380px;
 
     .screen{
-        color: white;
+        color: var(--screen-text);
         height: 127px;
         margin: 30px 0 24px;
         padding: 45px 36px;
@@ -168,7 +166,7 @@ body{
             }
 
             &.opt{
-                color: white;
+                color: var(--opt-keys-text);
                 background-color: var(--opt-keys-bg);
                 box-shadow: 0 4px 0 0 var(--opt-keys-shadow);
 
@@ -185,7 +183,7 @@ body{
             }
 
             &.equal{
-                color: white;
+                color: var(--equal-key-text);
                 box-shadow: 0 4px 0 0 var(--equal-key-shadow);
                 background-color: var(--equal-key-bg);
 
