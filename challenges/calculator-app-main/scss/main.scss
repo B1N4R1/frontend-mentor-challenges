@@ -9,6 +9,7 @@
 }
 
 body{
+    min-width: 415px;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -37,6 +38,7 @@ body.theme-3 .theme .toggle::after{
 
 .head{
     min-width: 380px;
+    margin: 0 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -107,6 +109,7 @@ body.theme-3 .theme .toggle::after{
 
 .calculator{
     min-width: 380px;
+    margin: 0 20px;
 
     .screen{
         color: var(--screen-text);

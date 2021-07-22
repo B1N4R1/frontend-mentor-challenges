@@ -57,6 +57,7 @@ body.theme-3 {
 }
 
 body {
+  min-width: 415px;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,6 +98,7 @@ body.theme-3 .theme .toggle::after {
 
 .head {
   min-width: 380px;
+  margin: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,6 +185,7 @@ body.theme-3 .theme .toggle::after {
 
 .calculator {
   min-width: 380px;
+  margin: 0 20px;
 }
 
 .calculator .screen {
