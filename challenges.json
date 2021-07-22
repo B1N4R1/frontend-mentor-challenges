@@ -102,5 +102,18 @@
         "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/stats-preview-card-component-main",
         "frontend-mentor": "https://www.frontendmentor.io/solutions/stats-card-component-ZrqI6no1Y",
         "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/stats-preview-card-component-main"
+    },
+    "9": {
+        "id": 9,
+        "title": "Calculator App",
+        "progress": "Completed",
+        "languages": {
+            "html": true,
+            "css": true,
+            "js": true
+        },
+        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/calculator-app-main",
+        "frontend-mentor": "https://www.frontendmentor.io/solutions/calculator-app--n9RpRptR",
+        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/calculator-app-main/"
     }
 }
