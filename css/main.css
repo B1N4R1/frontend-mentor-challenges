@@ -1,3 +1,93 @@
+@-webkit-keyframes htmlButtonAnimation {
+  0% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+    -webkit-box-shadow: 0px 2px 0px var(--html-color-darker);
+            box-shadow: 0px 2px 0px var(--html-color-darker);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-box-shadow: 0px 4px 0px var(--html-color-darker);
+            box-shadow: 0px 4px 0px var(--html-color-darker);
+  }
+}
+
+@keyframes htmlButtonAnimation {
+  0% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+    -webkit-box-shadow: 0px 2px 0px var(--html-color-darker);
+            box-shadow: 0px 2px 0px var(--html-color-darker);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-box-shadow: 0px 4px 0px var(--html-color-darker);
+            box-shadow: 0px 4px 0px var(--html-color-darker);
+  }
+}
+
+@-webkit-keyframes cssButtonAnimation {
+  0% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+    -webkit-box-shadow: 0px 2px 0px var(--css-color-darker);
+            box-shadow: 0px 2px 0px var(--css-color-darker);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-box-shadow: 0px 4px 0px var(--css-color-darker);
+            box-shadow: 0px 4px 0px var(--css-color-darker);
+  }
+}
+
+@keyframes cssButtonAnimation {
+  0% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+    -webkit-box-shadow: 0px 2px 0px var(--css-color-darker);
+            box-shadow: 0px 2px 0px var(--css-color-darker);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-box-shadow: 0px 4px 0px var(--css-color-darker);
+            box-shadow: 0px 4px 0px var(--css-color-darker);
+  }
+}
+
+@-webkit-keyframes jsButtonAnimation {
+  0% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+    -webkit-box-shadow: 0px 2px 0px var(--js-color-darker);
+            box-shadow: 0px 2px 0px var(--js-color-darker);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-box-shadow: 0px 4px 0px var(--js-color-darker);
+            box-shadow: 0px 4px 0px var(--js-color-darker);
+  }
+}
+
+@keyframes jsButtonAnimation {
+  0% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+    -webkit-box-shadow: 0px 2px 0px var(--js-color-darker);
+            box-shadow: 0px 2px 0px var(--js-color-darker);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-box-shadow: 0px 4px 0px var(--js-color-darker);
+            box-shadow: 0px 4px 0px var(--js-color-darker);
+  }
+}
+
 :root {
   --html-color: #EC652A;
   --css-color: #38A8E0;
@@ -201,10 +291,8 @@ ul, li {
 }
 
 .challenges .challenge .hero .languages .language.html:hover {
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
-  -webkit-box-shadow: 0px 2px 0px var(--html-color-darker);
-          box-shadow: 0px 2px 0px var(--html-color-darker);
+  -webkit-animation: htmlButtonAnimation .5s forwards;
+          animation: htmlButtonAnimation .5s forwards;
 }
 
 .challenges .challenge .hero .languages .language.css {
@@ -214,10 +302,8 @@ ul, li {
 }
 
 .challenges .challenge .hero .languages .language.css:hover {
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
-  -webkit-box-shadow: 0px 2px 0px var(--css-color-darker);
-          box-shadow: 0px 2px 0px var(--css-color-darker);
+  -webkit-animation: cssButtonAnimation .5s forwards;
+          animation: cssButtonAnimation .5s forwards;
 }
 
 .challenges .challenge .hero .languages .language.js {
@@ -227,10 +313,8 @@ ul, li {
 }
 
 .challenges .challenge .hero .languages .language.js:hover {
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
-  -webkit-box-shadow: 0px 2px 0px var(--js-color-darker);
-          box-shadow: 0px 2px 0px var(--js-color-darker);
+  -webkit-animation: jsButtonAnimation .5s forwards;
+          animation: jsButtonAnimation .5s forwards;
 }
 
 .challenges .challenge .links {
