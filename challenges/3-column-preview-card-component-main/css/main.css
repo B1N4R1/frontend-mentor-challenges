@@ -15,7 +15,7 @@
             flex-direction: column !important;
   }
   .container .col p {
-    margin: 0 0 21px !important;
+    margin: 0 0 35px !important;
   }
   .container .col:nth-child(1) {
     border-radius: 10px 10px 0 0 !important;
@@ -111,6 +111,7 @@ a {
   outline: none;
   padding: 15px 34px;
   border: 1px solid transparent;
+  white-space: nowrap;
   border-radius: 30px;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;

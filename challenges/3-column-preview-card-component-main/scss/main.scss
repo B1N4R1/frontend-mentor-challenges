@@ -15,7 +15,7 @@
         .col{
 
             p{
-                margin: 0 0 21px !important;
+                margin: 0 0 35px !important;
             }
 
             &:nth-child(1){
@@ -101,6 +101,7 @@ a{
             outline: none;
             padding: 15px 34px;
             border: 1px solid transparent;
+            white-space: nowrap;
             border-radius: 30px;
             transition: all .3s ease;
             mix-blend-mode: screen;
