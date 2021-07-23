@@ -35,65 +35,29 @@
       </div>
     </div>
     <div class="calculator">
-      <div class="screen" data-clear-value="0" data-clear-operation="0" data-sign="" data-reset="0">
-        <span class="value"></span>
-        <div class="operation"></div>
+      <div class="screen">
+        <span class="cur-operand" data-cur-operand></span>
+        <div class="prev-operand" data-prev-operand></div>
       </div>
       <div class="keypad">
-        <div id="key0" class="key" data-key="number">
-          <span>0</span>
-        </div>
-        <div id="key1" class="key" data-key="number">
-          <span>1</span>
-        </div>
-        <div id="key2" class="key" data-key="number">
-          <span>2</span>
-        </div>
-        <div id="key3" class="key" data-key="number">
-          <span>3</span>
-        </div>
-        <div id="key4" class="key" data-key="number">
-          <span>4</span>
-        </div>
-        <div id="key5" class="key" data-key="number">
-          <span>5</span>
-        </div>
-        <div id="key6" class="key" data-key="number">
-          <span>6</span>
-        </div>
-        <div id="key7" class="key" data-key="number">
-          <span>7</span>
-        </div>
-        <div id="key8" class="key" data-key="number">
-          <span>8</span>
-        </div>
-        <div id="key9" class="key" data-key="number">
-          <span>9</span>
-        </div>
-        <div id="dot" class="key" data-key="dot">
-          <span>.</span>
-        </div>
-        <div id="slash" class="key" data-key="slash">
-          <span>/</span>
-        </div>
-        <div id="add" class="key" data-key="add">
-          <span>+</span>
-        </div>
-        <div id="minus" class="key" data-key="minus">
-          <span>-</span>
-        </div>
-        <div id="multiply" class="key" data-key="multiply">
-          <span>x</span>
-        </div>
-        <div id="reset" class="key opt" data-key="reset">
-          <span>RESET</span>
-        </div>
-        <div id="del" class="key opt" data-key="del">
-          <span>DEL</span>
-        </div>
-        <div id="equal" class="key equal" data-key="equal">
-          <span>=</span>
-        </div>
+        <button class="key" id="key0" data-number>0</button>
+        <button class="key" id="key1" data-number>1</button>
+        <button class="key" id="key2" data-number>2</button>
+        <button class="key" id="key3" data-number>3</button>
+        <button class="key" id="key4" data-number>4</button>
+        <button class="key" id="key5" data-number>5</button>
+        <button class="key" id="key6" data-number>6</button>
+        <button class="key" id="key7" data-number>7</button>
+        <button class="key" id="key8" data-number>8</button>
+        <button class="key" id="key9" data-number>9</button>
+        <button class="key" id="dot" data-number>.</button>
+        <button class="key" id="reset" data-reset>RESET</button>
+        <button class="key" id="del" data-del>DEL</button>
+        <button class="key" id="equal" data-equal>=</button>
+        <button class="key" id="add" data-operation>+</button>
+        <button class="key" id="minus" data-operation>-</button>
+        <button class="key" id="slash" data-operation>/</button>
+        <button class="key" id="multiply" data-operation>x</button>
       </div>
     </div>
 

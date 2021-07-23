@@ -1,129 +1,129 @@
-localStorage.setItem("result", -1);
+class Calculator {
 
-$(".key").on("click", function(){
-
-    let key = this;
-    let key_type = $(key).attr("data-key");
-    let screen = document.querySelector('.screen');
-    let value = screen.firstElementChild;
-    let operation = screen.lastElementChild;
-    let result = localStorage.getItem("result");
-    let sign = screen.getAttribute("data-sign");
-
-    if(parseInt(screen.getAttribute("data-clear-operation"))){
-        operation.innerText = "";
-        screen.setAttribute("data-clear-operation", 0);
+    constructor(prevOperandText, curOperandText){
+        this.curOperandText = curOperandText;
+        this.prevOperandText = prevOperandText;
+        this.clear();
     }
 
-    if (key_type == "number" || key_type == "dot") {
-
-        if (parseInt(screen.getAttribute("data-clear-value"))) {
-            value.innerText = "";
-        }
-
-        value.innerText += key.innerText;
-
-        localStorage.setItem("result", parseFloat(value.innerText));
-
-        if (sign != "") {
-
-            result = calculate(result, value.innerText, sign);
-
-            localStorage.setItem("result", result);
-            screen.setAttribute("data-sign", "");
-
-        }
-
-    }
-    else if(key_type != "reset" && key_type != "del" && key_type != "equal" && result != -1){
-
-        if (key.innerText == "/" && operation.innerText != "") {
-            operation.innerText = "(" + operation.innerText + value.innerText + ")" + key.innerText;
-        }
-        else{
-            operation.innerText += value.innerText + key.innerText;
-        }
-
-        screen.setAttribute("data-clear-value", 1);
-        screen.setAttribute("data-sign", key.innerText);
-
+    clear() {
+        this.curOperand = '';
+        this.prevOperand = '';
+        this.operation = undefined;
     }
 
-    if (key_type == "del" && sign == "") {
-        
-        value.innerText = value.innerText.slice(0, -1);
-
-        //value.innerText = Math.floor(value.innerText / 10);
-
-        if (value.innerText == "") {
-            localStorage.setItem("result", -1);
-        }
-        else{
-            localStorage.setItem("result", value.innerText);
-        }
-
+    delete() {
+        this.curOperand = this.curOperand.toString().slice(0, -1);
     }
 
-    if(key_type == "equal" && screen.getAttribute("data-reset") == "0"){
+    appendNum(number) {
+        if(number === '.' && this.curOperand.includes('.')) return;
+        this.curOperand = this.curOperand.toString() + number.toString();
+    }
 
-        if (sign != "") {
+    getOperation(operation) {
+        if (this.curOperand === '') return;
+        if (this.prevOperand !== '') {
+            this.calculate();
+        }
+        this.operation = operation;
+        this.prevOperand = this.curOperand;
+        this.curOperand = '';
+    }
+
+    calculate() {
+        let result;
+        const prev = parseFloat(this.prevOperand);
+        const cur = parseFloat(this.curOperand);
+
+        if (isNaN(prev) || isNaN(cur)) return;
+
+        switch (this.operation) {
             
-            console.log(operation.innerText);
+            case '+':
+                result = prev + cur;
+                break;
+            
+            case '-':
+                result = prev - cur;
+                break;
+            
+            case '*':
+                result = prev * cur;
+                break;
 
-            result = operation.innerText.split(sign)[0];
-
-            result = calculate(result, result, sign);
-
-            localStorage.setItem("result", result);
+            case '/':
+                result = prev / cur;
+                break;
+        
+            default:
+                return;
 
         }
 
-        operation.innerText += value.innerText + "=";
-
-        console.log(result);
-
-        value.innerText = result;
-
-        screen.setAttribute("data-clear-operation", 1);
-        screen.setAttribute("data-reset", 1);
+        this.curOperand = result;
+        this.operation = undefined;
+        this.prevOperand = '';
 
     }
 
-    if (key_type == "reset") {
-        
-        value.innerText = "";
-        operation.innerText = "";
+    convertNumber(number) {
 
-        screen.setAttribute("data-sign", "");
-        screen.setAttribute("data-reset", 0);
-        screen.setAttribute("data-clear-value", 0);
-        screen.setAttribute("data-clear-operation", 0);
+        let result;
+        const strNum = number.toString();
+        const digits = parseFloat(strNum.split('.')[0])
+        const decimals = strNum.split('.')[1];
 
-        localStorage.setItem("result", -1);
+        result = (isNaN(digits)) ? '' : digits.toLocaleString('en', {maximumFractionDigits: 0});
+
+        return (decimals != null) ? `${result}.${decimals}` : result;
 
     }
 
-})
+    updateDisplay() {
 
-function calculate(a, b, sign){
+        this.curOperandText.innerText = this.convertNumber(this.curOperand);
+        this.prevOperandText.innerText = (this.operation != null) ? `${this.convertNumber(this.prevOperand)} ${this.operation}` : '';
 
-    let result;
-
-    if (sign == "+") {
-        result = parseFloat(a) + parseFloat(b);
     }
-    else if (sign == "-") {
-        result = parseFloat(a) - parseFloat(b);
-    }
-    else if (sign == "x") {
-        result = parseFloat(a) * parseFloat(b);
-    }
-    else if (sign == "/") {
-        result = parseFloat(a) / parseFloat(b);
-    }
-
-    result = Math.round(result * 1000000) / 1000000; // Round decimals if necessary
-
-    return result;
 
 }
+
+const numbers = document.querySelectorAll('[data-number]');
+const operations = document.querySelectorAll('[data-operation]');
+const equal = document.querySelector('[data-equal]');
+const del = document.querySelector('[data-del]');
+const reset = document.querySelector('[data-reset]');
+const prevOperandText = document.querySelector('[data-prev-operand]');
+const curOperandText = document.querySelector('[data-cur-operand]');
+
+const calculator = new Calculator(prevOperandText, curOperandText);
+
+numbers.forEach(number => {
+    number.addEventListener("click", () => {
+        calculator.appendNum(number.innerText);
+        calculator.updateDisplay();
+    });
+});
+
+operations.forEach(operation => {
+    operation.addEventListener("click", () => {
+        calculator.getOperation(operation.innerText);
+        calculator.updateDisplay();
+    });
+});
+
+equal.addEventListener("click", () => {
+    calculator.calculate();
+    calculator.updateDisplay();
+});
+
+reset.addEventListener("click", () => {
+    calculator.clear();
+    calculator.updateDisplay();
+});
+
+del.addEventListener("click", () => {
+    calculator.delete();
+    calculator.updateDisplay();
+});
