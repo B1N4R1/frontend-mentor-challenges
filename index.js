@@ -22,7 +22,6 @@ function createChallengeCard(challenge){
 
     const mainDIV = document.createElement("div");
     mainDIV.setAttribute("class", `challenge ${challenge["progress"].replace(" ", "-").toLowerCase()}`);
-    mainDIV.setAttribute("data-position", `${challenge["id"]}`);
 
     const captionANCHOR = document.createElement("a");
     captionANCHOR.setAttribute("href", `${challenge["live-site"]}`);

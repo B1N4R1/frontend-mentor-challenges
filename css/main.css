@@ -67,7 +67,8 @@ ul, li {
 }
 
 .challenges {
-  width: 90%;
+  width: 100%;
+  max-width: 1700px;
   margin: 40px auto;
   display: -ms-grid;
   display: grid;
