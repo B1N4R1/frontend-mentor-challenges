@@ -96,7 +96,7 @@ ul,li{
             background-color: #FECA57;
         }
 
-        @include new-labels(2);
+        @include showNewChallengeLabel(2);
 
         .caption{
             height: 230px;
@@ -136,6 +136,7 @@ ul,li{
                 content: 'NEW';
                 top: 0;
                 right: 110px;
+                z-index: 1;
                 visibility: hidden;
                 background-color: #EE5253;
             }

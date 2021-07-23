@@ -28,10 +28,13 @@ function createChallengeCard(challenge){
     captionANCHOR.setAttribute("href", `${challenge["live-site"]}`);
     captionANCHOR.setAttribute("target", "_blank");
     captionANCHOR.setAttribute("class", "caption");
+    captionANCHOR.setAttribute("rel", `noreferrer`);
     captionANCHOR.setAttribute("data-progress", `${challenge["progress"]}`);
 
     const captionIMG = document.createElement("img");
     captionIMG.setAttribute("src", `images/challenge-${challenge["id"]}.jpeg`);
+    captionIMG.setAttribute("alt", `challenge-${challenge["id"]}`);
+    captionIMG.setAttribute("loading", "lazy");
     
     captionANCHOR.appendChild(captionIMG);
 
@@ -41,6 +44,7 @@ function createChallengeCard(challenge){
     const heroANCHOR = document.createElement("a");
     heroANCHOR.setAttribute("href", `${challenge["live-site"]}`);
     heroANCHOR.setAttribute("target", "_blank");
+    heroANCHOR.setAttribute("rel", `noreferrer`);
     heroANCHOR.innerText = challenge["title"];
 
     const heroUL = document.createElement("ul");
@@ -73,6 +77,7 @@ function createChallengeCard(challenge){
         let linkName = link.toLowerCase().replace(" ", "-");
         const linkANCHOR = document.createElement("a");
         linkANCHOR.setAttribute("href", `${challenge[linkName]}`);
+        linkANCHOR.setAttribute("rel", `noreferrer`);
 
         if (challenge[linkName] != '#') {
             linkANCHOR.setAttribute("target", "_blank");

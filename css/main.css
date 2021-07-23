@@ -110,7 +110,7 @@ ul, li {
   visibility: visible;
 }
 
-.challenges .challenge:nth-child(2) .caption::before {
+.challenges .challenge:nth-child(1) .caption::before, .challenges .challenge:nth-child(2) .caption::before {
   visibility: visible;
 }
 
@@ -156,6 +156,7 @@ ul, li {
   content: 'NEW';
   top: 0;
   right: 110px;
+  z-index: 1;
   visibility: hidden;
   background-color: #EE5253;
 }

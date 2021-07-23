@@ -1,6 +1,15 @@
-@mixin new-labels($len) {
+@mixin showNewChallengeLabel($len) {
+    $selector: "";
     @for $i from 1 to $len + 1 {
-        &:nth-child(#{$i}) .caption::before{
+
+        @if $i == $len{
+            $selector: $selector + "&:nth-child(#{$i}) .caption::before";
+        }
+        @else{
+            $selector: $selector + "&:nth-child(#{$i}) .caption::before" + ",";
+        }
+
+        #{$selector}{
             visibility: visible;
         }
     }
