@@ -77,8 +77,8 @@ body {
 
 .container {
   width: 100%;
-  margin: 40px;
-  max-width: 540px;
+  margin: 30px 40px;
+  max-width: 580px;
 }
 
 body.theme-1 .theme .toggle::after {
@@ -218,9 +218,8 @@ body.theme-3 .theme .toggle::after {
   display: grid;
   grid-gap: 28px 25px;
   grid-auto-rows: 60px;
-  -ms-grid-columns: (minmax(60px, 1fr))[4];
-      grid-template-columns: repeat(4, minmax(60px, 1fr));
-      grid-template-areas: "key7 key8 key9 del" "key4 key5 key6 add" "key1 key2 key3 minus" "dot key0 slash multiply" "reset reset equal equal";
+  -ms-grid-columns: (minmax(60px, 100px))[4];
+      grid-template-columns: repeat(4, minmax(60px, 100px));
   border-radius: 10px;
   background-color: var(--keypad-bg);
 }
@@ -244,6 +243,10 @@ body.theme-3 .theme .toggle::after {
           transform: translateY(2px);
   -webkit-box-shadow: 0 2px 0 0 var(--numeric-keys-shadow);
           box-shadow: 0 2px 0 0 var(--numeric-keys-shadow);
+}
+
+.calculator .keypad .key[data-reset], .calculator .keypad .key[data-equal] {
+  grid-column: span 2;
 }
 
 .calculator .keypad .key[data-reset], .calculator .keypad .key[data-del] {
@@ -280,7 +283,7 @@ body.theme-3 .theme .toggle::after {
 
 .attribution {
   color: var(--screen-text);
-  margin: 20px 0;
+  margin: 0 30px;
   font-size: .5rem;
   text-align: center;
   letter-spacing: 1px;
@@ -289,114 +292,4 @@ body.theme-3 .theme .toggle::after {
 .attribution a {
   color: inherit;
   font-size: inherit;
-}
-
-#key0 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  grid-area: key0;
-}
-
-#key1 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: key1;
-}
-
-#key2 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: key2;
-}
-
-#key3 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: key3;
-}
-
-#key4 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: key4;
-}
-
-#key5 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: key5;
-}
-
-#key6 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: key6;
-}
-
-#key7 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: key7;
-}
-
-#key8 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: key8;
-}
-
-#key9 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: key9;
-}
-
-#dot {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: dot;
-}
-
-#slash {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
-  grid-area: slash;
-}
-
-#add {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
-  grid-area: add;
-}
-
-#minus {
-  -ms-grid-row: 3;
-  -ms-grid-column: 4;
-  grid-area: minus;
-}
-
-#multiply {
-  -ms-grid-row: 4;
-  -ms-grid-column: 4;
-  grid-area: multiply;
-}
-
-#reset {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: reset;
-}
-
-#del {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: del;
-}
-
-#equal {
-  -ms-grid-row: 5;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-area: equal;
 }
