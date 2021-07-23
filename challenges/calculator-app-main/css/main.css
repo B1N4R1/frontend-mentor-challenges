@@ -196,18 +196,20 @@ body.theme-3 .theme .toggle::after {
   position: relative;
   text-align: right;
   border-radius: 10px;
+  overflow: hidden;
   background-color: var(--screen-bg);
 }
 
-.calculator .screen .value {
+.calculator .screen .cur-operand {
   font-size: 1.45rem;
 }
 
-.calculator .screen .operation {
+.calculator .screen .prev-operand {
   position: absolute;
   top: 15px;
   right: 25px;
   font-size: .6rem;
+  opacity: 0.75;
 }
 
 .calculator .keypad {
@@ -226,25 +228,15 @@ body.theme-3 .theme .toggle::after {
 .calculator .keypad .key {
   color: var(--numeric-keys-text);
   cursor: pointer;
+  border: none;
+  outline: none;
   padding: 15px 0 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
+  font-weight: 700;
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 0 0 var(--numeric-keys-shadow);
           box-shadow: 0 4px 0 0 var(--numeric-keys-shadow);
   background-color: var(--numeric-keys-bg);
-}
-
-.calculator .keypad .key span {
-  font-weight: 700;
 }
 
 .calculator .keypad .key:active {
@@ -254,42 +246,36 @@ body.theme-3 .theme .toggle::after {
           box-shadow: 0 2px 0 0 var(--numeric-keys-shadow);
 }
 
-.calculator .keypad .key.opt {
+.calculator .keypad .key[data-reset], .calculator .keypad .key[data-del] {
   color: var(--opt-keys-text);
+  font-size: .6rem;
+  font-weight: 600;
   background-color: var(--opt-keys-bg);
   -webkit-box-shadow: 0 4px 0 0 var(--opt-keys-shadow);
           box-shadow: 0 4px 0 0 var(--opt-keys-shadow);
 }
 
-.calculator .keypad .key.opt:active {
+.calculator .keypad .key[data-reset]:active, .calculator .keypad .key[data-del]:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
   -webkit-box-shadow: 0 2px 0 0 var(--opt-keys-shadow);
           box-shadow: 0 2px 0 0 var(--opt-keys-shadow);
 }
 
-.calculator .keypad .key.opt span {
+.calculator .keypad .key[data-equal] {
+  color: var(--equal-key-text);
   font-size: .6rem;
   font-weight: 600;
-}
-
-.calculator .keypad .key.equal {
-  color: var(--equal-key-text);
   -webkit-box-shadow: 0 4px 0 0 var(--equal-key-shadow);
           box-shadow: 0 4px 0 0 var(--equal-key-shadow);
   background-color: var(--equal-key-bg);
 }
 
-.calculator .keypad .key.equal:active {
+.calculator .keypad .key[data-equal]:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
   -webkit-box-shadow: 0 2px 0 0 var(--equal-key-shadow);
           box-shadow: 0 2px 0 0 var(--equal-key-shadow);
-}
-
-.calculator .keypad .key.equal span {
-  font-size: .6rem;
-  font-weight: 600;
 }
 
 .attribution {

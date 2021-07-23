@@ -119,17 +119,19 @@ body.theme-3 .theme .toggle::after{
         position: relative;
         text-align: right;
         border-radius: 10px;
+        overflow: hidden;
         background-color: var(--screen-bg);
 
-        .value{
+        .cur-operand{
             font-size: 1.45rem;
         }
 
-        .operation{
+        .prev-operand{
             position: absolute;
             top: 15px;
             right: 25px;
             font-size: .6rem;
+            opacity: 0.75;
         }
 
     }
@@ -151,26 +153,24 @@ body.theme-3 .theme .toggle::after{
         .key{
             color: var(--numeric-keys-text);
             cursor: pointer;
+            border: none;
+            outline: none;
             padding: 15px 0 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
+            font-weight: 700;
             border-radius: 10px;
             box-shadow: 0 4px 0 0 var(--numeric-keys-shadow);
             background-color: var(--numeric-keys-bg);
-
-            span{
-                font-weight: 700;
-            }
 
             &:active{
                 transform: translateY(2px);
                 box-shadow: 0 2px 0 0 var(--numeric-keys-shadow);
             }
 
-            &.opt{
+            &[data-reset], &[data-del]{
                 color: var(--opt-keys-text);
+                font-size: .6rem;
+                font-weight: 600;
                 background-color: var(--opt-keys-bg);
                 box-shadow: 0 4px 0 0 var(--opt-keys-shadow);
 
@@ -179,26 +179,18 @@ body.theme-3 .theme .toggle::after{
                     box-shadow: 0 2px 0 0 var(--opt-keys-shadow);
                 }
 
-                span{
-                    font-size: .6rem;
-                    font-weight: 600;
-                }
-
             }
 
-            &.equal{
+            &[data-equal]{
                 color: var(--equal-key-text);
+                font-size: .6rem;
+                font-weight: 600;
                 box-shadow: 0 4px 0 0 var(--equal-key-shadow);
                 background-color: var(--equal-key-bg);
 
                 &:active{
                     transform: translateY(2px);
                     box-shadow: 0 2px 0 0 var(--equal-key-shadow);
-                }
-
-                span{
-                    font-size: .6rem;
-                    font-weight: 600;
                 }
 
             }
