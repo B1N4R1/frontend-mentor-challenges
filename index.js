@@ -1,8 +1,12 @@
-$.getJSON("challenges.json", function(challenges){
+$.getJSON("challenges.json", function(json){
     
+    const challenges = json["challenges"];
+
     const length = Object.keys(challenges).length;
 
-    for (let i = 1; i <= length; i++) {
+    challenges.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    for (let i = 0; i < length; i++) {
 
         const challenge = challenges[i];
 

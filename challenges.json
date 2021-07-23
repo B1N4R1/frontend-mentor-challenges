@@ -1,119 +1,132 @@
 {
-    "1": {
-        "id": 1,
-        "title": "Room Homepage",
-        "progress": "Completed",
-        "languages": {
-            "html": true,
-            "css": true,
-            "js": true
+    "challenges": [
+        {
+            "id": 1,
+            "title": "Room Homepage",
+            "progress": "Completed",
+            "date": "2020-11-22",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": true
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/room-homepage-master",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/room-homepage-6Fb7kcD8z",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/room-homepage-master"
         },
-        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/room-homepage-master",
-        "frontend-mentor": "https://www.frontendmentor.io/solutions/room-homepage-6Fb7kcD8z",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/room-homepage-master"
-    },
-    "2": {
-        "id": 2,
-        "title": "Profile Card Component",
-        "progress": "Completed",
-        "languages": {
-            "html": true,
-            "css": true,
-            "js": false
+        {
+            "id": 2,
+            "title": "Profile Card Component",
+            "progress": "Completed",
+            "date": "2020-11-19",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": false
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/profile-card-component-main",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/profile-card-component-with-html-and-css-NhzrIPBca",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/profile-card-component-main"
         },
-        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/profile-card-component-main",
-        "frontend-mentor": "https://www.frontendmentor.io/solutions/profile-card-component-with-html-and-css-NhzrIPBca",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/profile-card-component-main"
-    },
-    "3": {
-        "id": 3,
-        "title": "FAQ Accordion Card",
-        "progress": "Completed",
-        "languages": {
-            "html": true,
-            "css": true,
-            "js": true
+        {
+            "id": 3,
+            "title": "FAQ Accordion Card",
+            "progress": "Completed",
+            "date": "2020-12-21",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": true
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/faq-accordion-card-main",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/faq-accordion-card-eBiUUGpID",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/faq-accordion-card-main"
         },
-        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/faq-accordion-card-main",
-        "frontend-mentor": "https://www.frontendmentor.io/solutions/faq-accordion-card-eBiUUGpID",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/faq-accordion-card-main"
-    },
-    "4": {
-        "id": 4,
-        "title": "Article Preview Component",
-        "progress": "Completed",
-        "languages": {
-            "html": true,
-            "css": true,
-            "js": true
+        {
+            "id": 4,
+            "title": "Article Preview Component",
+            "progress": "Completed",
+            "date": "2020-12-20",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": true
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/article-preview-component-master",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/responsive-article-card-component-gZ0k0E3LC",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/article-preview-component-master"
         },
-        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/article-preview-component-master",
-        "frontend-mentor": "https://www.frontendmentor.io/solutions/responsive-article-card-component-gZ0k0E3LC",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/article-preview-component-master"
-    },
-    "5": {
-        "id": 5,
-        "title": "Testimonials Grid Section",
-        "progress": "Completed",
-        "languages": {
-            "html": true,
-            "css": true,
-            "js": false
+        {
+            "id": 5,
+            "title": "Testimonials Grid Section",
+            "progress": "Completed",
+            "date": "2021-07-20",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": false
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/testimonials-grid-section-main",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/testimonials-grid-section-Z9pFrTB22",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/testimonials-grid-section-main/"
         },
-        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/testimonials-grid-section-main",
-        "frontend-mentor": "https://www.frontendmentor.io/solutions/testimonials-grid-section-Z9pFrTB22",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/testimonials-grid-section-main/"
-    },
-    "6": {
-        "id": 6,
-        "title": "Single Price Component",
-        "progress": "Completed",
-        "languages": {
-            "html": true,
-            "css": true,
-            "js": false
+        {
+            "id": 6,
+            "title": "Single Price Component",
+            "progress": "Completed",
+            "date": "202",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": false
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/single-price-grid-component-master",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/single-price-component-TyiWP9rnC",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/single-price-grid-component-master"
         },
-        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/single-price-grid-component-master",
-        "frontend-mentor": "https://www.frontendmentor.io/solutions/single-price-component-TyiWP9rnC",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/single-price-grid-component-master"
-    },
-    "7": {
-        "id": 7,
-        "title": "3 Column Card Component",
-        "progress": "Completed",
-        "languages": {
-            "html": true,
-            "css": true,
-            "js": false
+        {
+            "id": 7,
+            "title": "3 Column Card Component",
+            "progress": "Completed",
+            "date": "2021-07-19",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": false
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/3-column-preview-card-component-main",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/3-column-card-component-JuVBYmhYs",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/3-column-preview-card-component-main"
         },
-        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/3-column-preview-card-component-main",
-        "frontend-mentor": "https://www.frontendmentor.io/solutions/3-column-card-component-JuVBYmhYs",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/3-column-preview-card-component-main"
-    },
-    "8": {
-        "id": 8,
-        "title": "Stats Card Component",
-        "progress": "Completed",
-        "languages": {
-            "html": true,
-            "css": true,
-            "js": false
+        {
+            "id": 8,
+            "title": "Stats Card Component",
+            "progress": "Completed",
+            "date": "2021-07-18",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": false
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/stats-preview-card-component-main",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/stats-card-component-ZrqI6no1Y",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/stats-preview-card-component-main"
         },
-        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/stats-preview-card-component-main",
-        "frontend-mentor": "https://www.frontendmentor.io/solutions/stats-card-component-ZrqI6no1Y",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/stats-preview-card-component-main"
-    },
-    "9": {
-        "id": 9,
-        "title": "Calculator App",
-        "progress": "Completed",
-        "languages": {
-            "html": true,
-            "css": true,
-            "js": true
-        },
-        "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/calculator-app-main",
-        "frontend-mentor": "https://www.frontendmentor.io/solutions/calculator-app--n9RpRptR",
-        "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/calculator-app-main/"
-    }
+        {
+            "id": 9,
+            "title": "Calculator App",
+            "progress": "Completed",
+            "date": "2021-07-22",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": true
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/calculator-app-main",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/calculator-app--n9RpRptR",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/calculator-app-main/"
+        }
+        
+    ]
+
 }
