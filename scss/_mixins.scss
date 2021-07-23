@@ -1,0 +1,7 @@
+@mixin new-labels($len) {
+    @for $i from 1 to $len + 1 {
+        &:nth-child(#{$i}) .caption::before{
+            visibility: visible;
+        }
+    }
+}

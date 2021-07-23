@@ -18,6 +18,7 @@
 }
 
 html, body {
+  min-width: 360px;
   min-height: 100%;
 }
 
@@ -37,6 +38,12 @@ img {
 
 ul, li {
   list-style-type: none;
+}
+
+@media screen and (min-width: 2378px) {
+  .container .challenges {
+    max-width: 1700px;
+  }
 }
 
 .container {
@@ -68,7 +75,7 @@ ul, li {
 
 .challenges {
   width: 100%;
-  max-width: 1700px;
+  max-width: 1600px;
   margin: 40px auto;
   display: -ms-grid;
   display: grid;
@@ -92,11 +99,19 @@ ul, li {
 }
 
 .challenges .challenge.completed .caption::after {
-  background-color: #ACD847;
+  background-color: #1DD1A1;
 }
 
 .challenges .challenge.in-progress .caption::after {
-  background-color: #F1B604;
+  background-color: #FECA57;
+}
+
+.challenges .challenge:nth-child(1) .caption::before {
+  visibility: visible;
+}
+
+.challenges .challenge:nth-child(2) .caption::before {
+  visibility: visible;
 }
 
 .challenges .challenge .caption {
@@ -120,10 +135,7 @@ ul, li {
           transform: scale(1.05);
 }
 
-.challenges .challenge .caption::after {
-  content: attr(data-progress);
-  top: 0;
-  right: 0;
+.challenges .challenge .caption::after, .challenges .challenge .caption::before {
   height: var(--progress-height);
   margin: 10px;
   padding: 0 10px;
@@ -132,6 +144,20 @@ ul, li {
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.challenges .challenge .caption::after {
+  content: attr(data-progress);
+  top: 0;
+  right: 0;
+}
+
+.challenges .challenge .caption::before {
+  content: 'NEW';
+  top: 0;
+  right: 110px;
+  visibility: hidden;
+  background-color: #EE5253;
 }
 
 .challenges .challenge .hero {

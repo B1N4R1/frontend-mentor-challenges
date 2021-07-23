@@ -21,7 +21,8 @@ $.getJSON("challenges.json", function(json){
 function createChallengeCard(challenge){
 
     const mainDIV = document.createElement("div");
-    mainDIV.setAttribute("class", `challenge ${challenge["progress"].replace(" ", "-").toLowerCase()}`);
+    const progress = challenge["progress"].replace(" ", "-").toLowerCase();
+    mainDIV.setAttribute("class", `challenge ${progress}`);
 
     const captionANCHOR = document.createElement("a");
     captionANCHOR.setAttribute("href", `${challenge["live-site"]}`);
