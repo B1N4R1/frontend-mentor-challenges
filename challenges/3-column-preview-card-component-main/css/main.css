@@ -55,6 +55,10 @@ body {
   background-color: var(--very-light-gray);
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   margin: 20px;
   max-height: 100%;
@@ -101,6 +105,7 @@ body {
 }
 
 .container .col .btn-more {
+  color: black;
   border: 0;
   cursor: pointer;
   outline: none;
