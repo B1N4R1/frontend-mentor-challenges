@@ -48,7 +48,7 @@ class Calculator {
                 result = prev - cur;
                 break;
             
-            case '*':
+            case 'x':
                 result = prev * cur;
                 break;
 
