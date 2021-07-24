@@ -76,9 +76,7 @@ body {
 }
 
 .container {
-  width: 100%;
   margin: 30px 40px;
-  max-width: 580px;
 }
 
 body.theme-1 .theme .toggle::after {
@@ -97,7 +95,6 @@ body.theme-3 .theme .toggle::after {
 }
 
 .head {
-  min-width: 380px;
   margin: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,7 +181,6 @@ body.theme-3 .theme .toggle::after {
 }
 
 .calculator {
-  min-width: 380px;
   margin: 0 20px;
 }
 

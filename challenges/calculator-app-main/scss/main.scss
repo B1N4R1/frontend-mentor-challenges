@@ -19,9 +19,9 @@ body{
 }
 
 .container{
-    width: 100%;
+    // width: 100%;
     margin: 30px 40px;
-    max-width: 580px;
+    // max-width: 580px;
 }
 
 body.theme-1 .theme .toggle::after{
@@ -37,7 +37,7 @@ body.theme-3 .theme .toggle::after{
 }
 
 .head{
-    min-width: 380px;
+    // min-width: 380px;
     margin: 0 20px;
     display: flex;
     flex-direction: row;
@@ -108,7 +108,7 @@ body.theme-3 .theme .toggle::after{
 }
 
 .calculator{
-    min-width: 380px;
+    // min-width: 380px;
     margin: 0 20px;
 
     .screen{
