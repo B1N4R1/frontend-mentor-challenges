@@ -61,9 +61,30 @@ class Calculator {
 
         }
 
-        this.curOperand = result;
+
+        this.curOperand = this.roundNumber(result);
         this.operation = undefined;
         this.prevOperand = '';
+
+    }
+
+    roundNumber(number) {
+
+        const strNum = number.toString();
+        const decimals = strNum.split('.')[1];
+
+        if (decimals != null) {
+            
+            if (decimals.match(/^0+$/g)) {
+                number = Math.round(number * 100) / 100;
+            }
+            else{
+                number = number.toPrecision(5);
+            }
+
+        }
+
+        return number;
 
     }
 
@@ -75,8 +96,9 @@ class Calculator {
         const decimals = strNum.split('.')[1];
 
         result = (isNaN(digits)) ? '' : digits.toLocaleString('en', {maximumFractionDigits: 0});
+        result = (decimals != null) ? `${result}.${decimals}` : result;
 
-        return (decimals != null) ? `${result}.${decimals}` : result;
+        return result;
 
     }
 
