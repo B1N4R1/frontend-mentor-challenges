@@ -75,10 +75,6 @@ body {
   background-color: var(--main-bg);
 }
 
-.container {
-  margin: 30px 40px;
-}
-
 body.theme-1 .theme .toggle::after {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
@@ -92,6 +88,10 @@ body.theme-2 .theme .toggle::after {
 body.theme-3 .theme .toggle::after {
   -webkit-transform: translateX(40px);
           transform: translateX(40px);
+}
+
+.container {
+  margin: 30px 40px;
 }
 
 .head {
