@@ -9,8 +9,35 @@
             $selector: $selector + "&:nth-child(#{$i}) .caption::before" + ",";
         }
 
-        #{$selector}{
-            visibility: visible;
-        }
     }
+
+    #{$selector}{
+        visibility: visible;
+    }
+
+}
+
+@mixin linksImage {
+    
+    $i: 1;
+    $images: "../images/github.png", "../images/frontend-mentor.png", "../images/website.png";
+
+    @each $image in $images {
+
+        &:nth-child(#{$i}){
+
+            @if $i == 2 {
+                border-left: 1px solid var(--links-border-color);
+                border-right: 1px solid var(--links-border-color);
+            }
+
+            .link-icon{
+                background: url(#{$image}) no-repeat center center/cover;
+            }
+
+        }
+
+        $i: $i + 1;
+    }
+
 }

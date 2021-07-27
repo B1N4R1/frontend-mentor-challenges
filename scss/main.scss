@@ -2,17 +2,27 @@
 @import './keyframes';
 
 :root{
-    --html-color: #EC652A;
-    --css-color: #38A8E0;
-    --js-color: #FFD839;
-    --html-color-darker: #d5421a;
-    --css-color-darker: #1E8BC1;
-    --js-color-darker: #DAB92E;
+    --html-bg: #EC652A;
+    --html-shadow: #d5421a;
+
+    --css-bg: #38A8E0;
+    --css-shadow: #1E8BC1;
+
+    --js-bg: #FFD839;
+    --js-shadow: #DAB92E;
+
+    --new-label-bg: #EE5253;
+    --completed-label-bg: #1DD1A1;
+    --inprogress-label-bg: #FECA57;
+
+    --challenge-card-shadow: rgba(51, 51, 51, 0.25);
+
+    --links-border-color: #DBE5E6;
 
     --progress-height: 24px;
 }
 
-*{
+*, *::after, *::before{
     margin: 0;
     padding: 0;
     font-size: 15px;
@@ -87,14 +97,14 @@ ul,li{
     .challenge{
         overflow: hidden;
         border-radius: 10px;
-        box-shadow: -4px 4px 0 rgba(51, 51, 51, 0.25);
+        box-shadow: -4px 4px 0 var(--challenge-card-shadow);
 
         &.completed .caption::after{
-            background-color: #1DD1A1;
+            background-color: var(--completed-label-bg);
         }
 
         &.in-progress .caption::after{
-            background-color: #FECA57;
+            background-color: var(--inprogress-label-bg);
         }
 
         @include showNewChallengeLabel(2);
@@ -139,7 +149,7 @@ ul,li{
                 right: 110px;
                 z-index: 1;
                 visibility: hidden;
-                background-color: #EE5253;
+                background-color: var(--new-label-bg);
             }
 
         }
@@ -159,45 +169,38 @@ ul,li{
                 margin: 10px 0;
                 display: grid;
                 grid-gap: 15px;
-                grid-template-columns: repeat(auto-fill, minmax(60px, 60px));
+                grid-template-columns: repeat(auto-fill, 60px);
 
                 .language{
                     cursor: default;
                     font-size: 1.125rem;
                     text-align: center;
                     border-radius: 5px;
+                    box-shadow: 0px 4px 0px var(--language-shadow, #D5421A);
+                    background-color: var(--language-bg, #EC652A);
 
                     &.hide{
                         visibility: hidden;
                     }
 
+                    &:hover{
+                        animation: languageButtonAnimation .5s forwards;
+                    }
+
                     &.html{
-                        box-shadow: 0px 4px 0px var(--html-color-darker);
-                        background-color: var(--html-color);
-
-                        &:hover{
-                            animation: htmlButtonAnimation .5s forwards;
-                        }
-
+                        --language-bg: var(--html-bg);
+                        --language-shadow: var(--html-shadow);
                     }
 
                     &.css{
-                        box-shadow: 0px 4px 0px var(--css-color-darker);
-                        background-color: var(--css-color);
-
-                        &:hover{
-                            animation: cssButtonAnimation .5s forwards;
-                        }
+                        --language-bg: var(--css-bg);
+                        --language-shadow: var(--css-shadow);
 
                     }
 
                     &.js{
-                        box-shadow: 0px 4px 0px var(--js-color-darker);
-                        background-color: var(--js-color);
-
-                        &:hover{
-                            animation: jsButtonAnimation .5s forwards;
-                        }
+                        --language-bg: var(--js-bg);
+                        --language-shadow: var(--js-shadow);
 
                     }
 
@@ -212,7 +215,7 @@ ul,li{
             height: 60px;
             display: flex;
             justify-content: space-around;
-            border-top: 1px solid #DBE5E6;
+            border-top: 1px solid var(--links-border-color);
             background-color: white;
 
             .link{
@@ -221,34 +224,19 @@ ul,li{
                 display: flex;
                 align-items: center;
 
-                &:nth-child(1) .link-icon{
-                    background: url("../images/github.png") no-repeat center center/cover;
-                }
-
-                &:nth-child(2){
-                    border-left: 1px solid #DBE5E6;
-                    border-right: 1px solid #DBE5E6;
-
-                    .link-icon{
-                        background: url("../images/frontend-mentor.png") no-repeat center center/cover;
-                    }
-                }
-
-                &:nth-child(3) .link-icon{
-                    background: url("../images/website.png") no-repeat center center/cover;
+                &:hover .link-name{
+                    text-decoration: underline;
                 }
 
                 .link-icon{
                     width: 32px;
                     height: 32px;
                     margin-right: 8px;
-                    border: 1px solid #DBE5E6;
+                    border: 1px solid var(--links-border-color);
                     border-radius: 50%;
                 }
 
-                &:hover .link-name{
-                    text-decoration: underline;
-                }
+                @include linksImage;
 
             }
 
