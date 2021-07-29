@@ -1,0 +1,208 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("../images/bg-intro-desktop.png") no-repeat center center/cover;
+  background-color: var(--red);
+  background-blend-mode: overlay;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  body .container {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container section {
+    width: auto;
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container section {
+  width: 50%;
+  max-width: 588px;
+  padding: 20px;
+}
+
+.container section.hero {
+  color: white;
+}
+
+.container section.hero .title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.container section.form .message {
+  color: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-weight: 400;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 2px 0 rgba(85, 85, 85, 0.3);
+          box-shadow: 0 10px 2px 0 rgba(85, 85, 85, 0.3);
+  background-color: var(--blue);
+}
+
+.container section.form .message span {
+  font-weight: 600;
+}
+
+.container section.form form {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.container section.form form input {
+  width: 100%;
+  display: block;
+}
+
+.container section.form form .input-group {
+  margin: 1.25rem 0;
+  position: relative;
+}
+
+.container section.form form .input-group input {
+  border: 1px solid var(--grayish-blue);
+  outline: none;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+}
+
+.container section.form form .input-group input:focus, .container section.form form .input-group input:active {
+  border-color: var(--dark-blue);
+}
+
+.container section.form form .input-group.error .error-msg {
+  display: block;
+}
+
+.container section.form form .input-group.error::after {
+  content: '';
+  top: 50%;
+  right: 1rem;
+  width: 24px;
+  height: 24px;
+  margin-top: -11px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url("../images/icon-error.svg") no-repeat center center/cover;
+}
+
+.container section.form form .input-group .error-msg {
+  color: var(--red);
+  margin: 5px 0;
+  display: none;
+  font-size: .7rem;
+  font-style: italic;
+  text-align: right;
+}
+
+.container section.form form input[type=submit] {
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0 5px 0 0 #30bb7f;
+          box-shadow: 0 5px 0 0 #30bb7f;
+  background-color: #38cc8c;
+}
+
+.container section.form form input[type=submit]:hover {
+  background-color: #4dd198;
+}
+
+.container section.form form input[type=submit]:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0 3px 0 0 #30bb7f;
+          box-shadow: 0 3px 0 0 #30bb7f;
+}
+
+.container section.form form .terms {
+  color: var(--grayish-blue);
+  margin: 20px 0;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.container section.form form .terms a {
+  color: var(--red);
+  font-weight: 600;
+  font-size: inherit;
+}
+
+footer {
+  color: white;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+footer .attribution {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+footer .attribution a {
+  color: var(--blue);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+footer .attribution a:hover {
+  text-decoration: underline;
+}
