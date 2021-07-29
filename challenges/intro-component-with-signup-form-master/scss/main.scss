@@ -1,10 +1,15 @@
 $green: hsl(154, 59%, 51%);
 
 :root{
-    --red: hsl(0, 100%, 74%);
+    --red: hsl(0, 100%, 74%); /* Main backround, Error messages color, Terms & conditions color*/
 
+    // Submit button background, shadow & hover colors
+    --green: hsl(154, 59%, 51%);
+    --dark-green: #{darken($green, 5%)};
+    --light-green: #{lighten($green, 5%)};
+
+    // Message background & shadow, attribution anchor tag color & input focus state border color
     --blue: hsl(248, 32%, 49%);
-
     --dark-blue: hsl(249, 10%, 26%);
     --grayish-blue: hsl(246, 25%, 77%);
 }
@@ -99,9 +104,12 @@ a{
                     position: relative;
 
                     input{
+                        color: var(--dark-blue);
                         border: 1px solid var(--grayish-blue);
                         outline: none;
                         padding: 1rem 1.5rem;
+                        font-size: 1rem;
+                        font-weight: 600;
                         border-radius: 5px;
     
                         &:focus, &:active{
@@ -148,16 +156,16 @@ a{
                     padding: 1rem;
                     border-radius: 10px;
                     letter-spacing: 1px;
-                    box-shadow: 0 5px 0 0 darken($green, 5%);
-                    background-color: $green;
+                    box-shadow: 0 5px 0 0 var(--dark-green);
+                    background-color: var(--green);
 
                     &:hover{
-                        background-color: lighten($green, 5%);
+                        background-color: var(--light-green);
                     }
 
                     &:active{
                         transform: translateY(2px);
-                        box-shadow: 0 3px 0 0 darken($green, 5%);
+                        box-shadow: 0 3px 0 0 var(--dark-green);
                     }
 
                 }

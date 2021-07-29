@@ -1,5 +1,9 @@
 :root {
   --red: hsl(0, 100%, 74%);
+  /* Main backround, Error messages color, Terms & conditions color*/
+  --green: hsl(154, 59%, 51%);
+  --dark-green: #30bb7f;
+  --light-green: #4dd198;
   --blue: hsl(248, 32%, 49%);
   --dark-blue: hsl(249, 10%, 26%);
   --grayish-blue: hsl(246, 25%, 77%);
@@ -114,9 +118,12 @@ a {
 }
 
 .container section.form form .input-group input {
+  color: var(--dark-blue);
   border: 1px solid var(--grayish-blue);
   outline: none;
   padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
   border-radius: 5px;
 }
 
@@ -157,20 +164,20 @@ a {
   padding: 1rem;
   border-radius: 10px;
   letter-spacing: 1px;
-  -webkit-box-shadow: 0 5px 0 0 #30bb7f;
-          box-shadow: 0 5px 0 0 #30bb7f;
-  background-color: #38cc8c;
+  -webkit-box-shadow: 0 5px 0 0 var(--dark-green);
+          box-shadow: 0 5px 0 0 var(--dark-green);
+  background-color: var(--green);
 }
 
 .container section.form form input[type=submit]:hover {
-  background-color: #4dd198;
+  background-color: var(--light-green);
 }
 
 .container section.form form input[type=submit]:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
-  -webkit-box-shadow: 0 3px 0 0 #30bb7f;
-          box-shadow: 0 3px 0 0 #30bb7f;
+  -webkit-box-shadow: 0 3px 0 0 var(--dark-green);
+          box-shadow: 0 3px 0 0 var(--dark-green);
 }
 
 .container section.form form .terms {
