@@ -125,6 +125,20 @@
             "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/calculator-app-main",
             "frontend-mentor": "https://www.frontendmentor.io/solutions/calculator-app--n9RpRptR",
             "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/calculator-app-main/"
+        },
+        {
+            "id": 10,
+            "title": "Sign Up Form",
+            "progress": "Completed",
+            "date": "2021-07-29",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": true
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/intro-component-with-signup-form-master",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/intro-component-sign-up-form-tALKgYauA",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/intro-component-with-signup-form-master/"
         }
         
     ]
