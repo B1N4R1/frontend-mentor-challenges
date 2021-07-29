@@ -22,6 +22,14 @@ $green: hsl(154, 59%, 51%);
     font-family: 'Poppins', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
+input {
+    appearance: none;
+}
+
 body{
     min-height: 100vh;
     display: flex;
@@ -32,11 +40,12 @@ body{
     background-blend-mode: overlay;
 }
 
-a{
-    text-decoration: none;
-}
-
 @media screen and (max-width: 768px) {
+
+    *{
+        font-size: 12px;
+    }
+
     body .container{
         text-align: center;
         flex-direction: column;

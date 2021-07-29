@@ -18,6 +18,16 @@
   font-family: 'Poppins', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 body {
   min-height: 100vh;
   display: -webkit-box;
@@ -35,11 +45,10 @@ body {
   background-blend-mode: overlay;
 }
 
-a {
-  text-decoration: none;
-}
-
 @media screen and (max-width: 768px) {
+  * {
+    font-size: 12px;
+  }
   body .container {
     text-align: center;
     -webkit-box-orient: vertical;
