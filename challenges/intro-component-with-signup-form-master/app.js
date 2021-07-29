@@ -18,6 +18,9 @@ document.querySelector("#singupForm").addEventListener("submit", function(e){
 
             empty = 1;
         }
+        else if (input.parentElement.className == "input-group error") {
+            input.parentElement.className = "input-group";
+        }
 
         i++;
 
