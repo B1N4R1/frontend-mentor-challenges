@@ -14,7 +14,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 16px;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -42,22 +42,27 @@ body {
           flex-direction: column;
   background: url("../images/bg-intro-desktop.png") no-repeat center center/cover;
   background-color: var(--red);
-  background-blend-mode: overlay;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   * {
-    font-size: 12px;
+    font-size: 16px;
   }
   body .container {
-    text-align: center;
-    -webkit-box-orient: vertical;
+    text-align: left;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   body .container section {
-    width: auto;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  * {
+    font-size: 18px;
   }
 }
 
@@ -71,18 +76,16 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
 .container section {
-  width: 50%;
-  max-width: 588px;
-  padding: 20px;
+  max-width: 36.75rem;
+  padding: 1.25rem;
 }
 
 .container section.hero {
@@ -90,8 +93,13 @@ body {
 }
 
 .container section.hero .title {
+  margin-bottom: 1rem;
   font-size: 3rem;
   font-weight: 600;
+}
+
+.container section.hero .desc {
+  font-size: 1.1rem;
 }
 
 .container section.form .message {
@@ -191,7 +199,7 @@ body {
 
 .container section.form form .terms {
   color: var(--grayish-blue);
-  margin: 20px 0;
+  margin: 1.25rem 0;
   font-size: .8rem;
   text-align: center;
 }

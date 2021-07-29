@@ -18,7 +18,7 @@ $green: hsl(154, 59%, 51%);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 12px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -37,45 +37,53 @@ body{
     flex-direction: column;
     background: url("../images/bg-intro-desktop.png") no-repeat center center/cover;
     background-color: var(--red);
-    background-blend-mode: overlay;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
 
     *{
-        font-size: 12px;
+        font-size: 16px;
     }
 
     body .container{
-        text-align: center;
-        flex-direction: column;
+        text-align: left;
+        flex-direction: row;
 
         section{
-            width: auto;
+            width: 50%;
         }
 
     }
 }
 
+@media screen and (min-width: 1440px){
+    *{
+        font-size: 18px;
+    }
+}
+
 .container{
-    // height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
 
     section{
-        width: 50%;
-        max-width: 588px;
-        padding: 20px;
+        max-width: 36.75rem;
+        padding: 1.25rem;
 
         &.hero{
             color: white;
 
             .title{
+                margin-bottom: 1rem;
                 font-size: 3rem;
                 font-weight: 600;
+            }
+
+            .desc{
+                font-size: 1.1rem;
             }
 
         }
@@ -181,7 +189,7 @@ body{
 
                 .terms{
                     color: var(--grayish-blue);
-                    margin: 20px 0;
+                    margin: 1.25rem 0;
                     font-size: .8rem;
                     text-align: center;
 
