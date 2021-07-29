@@ -29,16 +29,15 @@
 }
 
 :root {
-  --html-bg: #EC652A;
-  --html-shadow: #d5421a;
-  --css-bg: #38A8E0;
-  --css-shadow: #1E8BC1;
-  --js-bg: #FFD839;
-  --js-shadow: #DAB92E;
+  --language-bg: #BCC5CE;
+  --language-shadow: #929EAD;
+  --language-text-color: #222222;
   --new-label-bg: #EE5253;
   --completed-label-bg: #1DD1A1;
   --inprogress-label-bg: #FECA57;
-  --challenge-card-shadow: rgba(51, 51, 51, 0.25);
+  --challenge-card-bg: #FFFFFF;
+  --challenge-card-shadow: rgba(102, 102, 102, 0.25);
+  --challenge-card-text-color: #333333;
   --links-border-color: #DBE5E6;
   --progress-height: 24px;
 }
@@ -57,11 +56,6 @@ html, body {
   min-height: 100%;
 }
 
-body {
-  background: -webkit-gradient(linear, left bottom, left top, from(#fff1eb), to(#ace0f9)) no-repeat center center/cover;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) no-repeat center center/cover;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -73,6 +67,11 @@ img {
 
 ul, li {
   list-style-type: none;
+}
+
+body {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff1eb), to(#ace0f9)) no-repeat center center/cover;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) no-repeat center center/cover;
 }
 
 @media screen and (min-width: 2378px) {
@@ -122,15 +121,12 @@ ul, li {
       grid-template-columns: repeat(auto-fit, minmax(300px, 380px));
 }
 
-.challenges::-webkit-scrollbar {
-  display: none;
-}
-
 .challenges .challenge {
   overflow: hidden;
   border-radius: 10px;
   -webkit-box-shadow: -4px 4px 0 var(--challenge-card-shadow);
           box-shadow: -4px 4px 0 var(--challenge-card-shadow);
+  background-color: var(--challenge-card-bg);
 }
 
 .challenges .challenge.completed .caption::after {
@@ -198,11 +194,11 @@ ul, li {
 }
 
 .challenges .challenge .hero a {
-  color: #333333;
+  color: var(--challenge-card-text-color);
   font-size: 1.5rem;
   white-space: nowrap;
-  -webkit-text-decoration-color: #333333;
-          text-decoration-color: #333333;
+  -webkit-text-decoration-color: var(--challenge-card-text-color);
+          text-decoration-color: var(--challenge-card-text-color);
 }
 
 .challenges .challenge .hero .languages {
@@ -215,13 +211,14 @@ ul, li {
 }
 
 .challenges .challenge .hero .languages .language {
+  color: var(--language-text-color);
   cursor: default;
   font-size: 1.125rem;
   text-align: center;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 4px 0px var(--language-shadow, #D5421A);
-          box-shadow: 0px 4px 0px var(--language-shadow, #D5421A);
-  background-color: var(--language-bg, #EC652A);
+  -webkit-box-shadow: 0px 4px 0px var(--language-shadow);
+          box-shadow: 0px 4px 0px var(--language-shadow);
+  background: var(--language-bg);
 }
 
 .challenges .challenge .hero .languages .language.hide {
@@ -233,23 +230,8 @@ ul, li {
           animation: languageButtonAnimation .5s forwards;
 }
 
-.challenges .challenge .hero .languages .language.html {
-  --language-bg: var(--html-bg);
-  --language-shadow: var(--html-shadow);
-}
-
-.challenges .challenge .hero .languages .language.css {
-  --language-bg: var(--css-bg);
-  --language-shadow: var(--css-shadow);
-}
-
-.challenges .challenge .hero .languages .language.js {
-  --language-bg: var(--js-bg);
-  --language-shadow: var(--js-shadow);
-}
-
 .challenges .challenge .links {
-  color: #333;
+  color: var(--challenge-card-text-color);
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,7 +239,6 @@ ul, li {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   border-top: 1px solid var(--links-border-color);
-  background-color: white;
 }
 
 .challenges .challenge .links .link {
