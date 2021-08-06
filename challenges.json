@@ -139,6 +139,20 @@
             "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/intro-component-with-signup-form-master",
             "frontend-mentor": "https://www.frontendmentor.io/solutions/intro-component-sign-up-form-tALKgYauA",
             "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/intro-component-with-signup-form-master/"
+        },
+        {
+            "id": 11,
+            "title": "Four card feature section",
+            "progress": "Completed",
+            "date": "2021-08-06",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": true
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/four-card-feature-section-master",
+            "frontend-mentor": "#",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/four-card-feature-section-master/"
         }
         
     ]
