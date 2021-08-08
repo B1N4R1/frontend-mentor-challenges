@@ -61,7 +61,7 @@ function createJobCard(job, translate) {
             <div class="pill${(job.new) ? ' new' : ''}">NEW!</div>
             <div class="pill${(job.featured) ? ' featured' : ''}">FEATURED</div>
           </div>
-          <h1 class="position">${job.position}</h1>
+          <h2 class="position">${job.position}</h2>
           <div class="more">
             <span class="postedAt">${job.postedAt}</span>
             <span class="contract">${job.contract}</span>
