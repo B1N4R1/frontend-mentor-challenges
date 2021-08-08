@@ -22,11 +22,27 @@ class FilterManager {
 
     }
 
-    addFilter(filter) {
+    addFilter(newFilter) {
 
-        const filterElement = this.createFilterCard(filter.innerText);
+        const filters = this.filterListElement.children;
 
-        this.filterListElement.innerHTML += filterElement;
+        let i = 0, found = 0;
+        while (i < filters.length && found == 0) {
+            
+            if (filters[i].innerText === newFilter.innerText) {
+                found = 1;
+            }
+            else{
+                i++;
+            }
+
+        }
+
+        if (!found) {
+            const filterElement = this.createFilterCard(newFilter.innerText);
+
+            this.filterListElement.innerHTML += filterElement;
+        }
 
     }
 
