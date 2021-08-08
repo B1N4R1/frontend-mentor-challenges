@@ -1,0 +1,298 @@
+:root{
+    --background: hsl(180, 52%, 96%);
+    --filter-tablets: hsl(180, 31%, 95%);
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --desaturated-dark-cyan: hsl(180, 29%, 50%);
+    --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+}
+
+body{
+    background-color: var(--background);
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+@media screen and (max-width: 425px) {
+    
+    *{
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 1075px) {
+    
+    main .job-listing .job{
+        margin: 3.6rem 0;
+        flex-direction: column;
+
+        .logo{
+            width: 50px;
+            height: 50px;
+            margin-top: -4rem;
+            margin-bottom: 1rem;
+        }
+
+        .info{
+            height: 120px;
+        }
+
+        .tablets{
+            align-self: auto;
+            margin-top: 1rem;
+            margin-left: 1rem;
+        }
+
+        hr{
+            display: block;
+        }
+
+    }
+
+}
+
+header{
+    position: relative;
+    margin-bottom: 5rem;
+    background-color: var(--desaturated-dark-cyan);
+}
+
+main{
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+section{
+    margin: 0 1rem;
+}
+
+.filters-wrapper{
+    display: flex;
+    width: 100%;
+    max-width: 1270px;
+    left: calc(50% - 1rem);
+    bottom: -40.5px;
+    padding: 1rem 2.6rem;
+    position: absolute;
+    transform: translateX(-205%);
+    border-radius: 5px;
+    transition: transform .3s ease-out;
+    box-shadow: 0px 10px 20px 2px rgba(91, 164, 164, 0.2);
+    background-color: white;
+
+    &.hide{
+        display: none;
+    }
+
+    &.slide-out{
+        left: calc(-50% - 2rem);
+    }
+
+    &.slide-in{
+        transform: translateX(-50%);
+    }
+
+    .filters{
+        display: flex;
+        flex-wrap: wrap;
+
+        .filter{
+            display: flex;
+            margin: .5rem;
+            overflow: hidden;
+            border-radius: 5px;
+            background-color: var(--filter-tablets);
+
+            .name{
+                color: var(--desaturated-dark-cyan);
+                padding: .6rem;
+                font-weight: 700;
+                background-color: var(--filter-tablets);
+            }
+
+            .remove{
+                cursor: pointer;
+                padding: 0 1rem;
+                background: url("../images/icon-remove.svg") no-repeat center center;
+                background-color: var(--desaturated-dark-cyan);
+
+                &:hover{
+                    background-color: var(--very-dark-grayish-cyan);
+                }
+
+            }
+
+        }
+
+    }
+
+    button{
+        color: var(--dark-grayish-cyan);
+        border: none;
+        cursor: pointer;
+        align-self: center;
+        font-weight: 700;
+        background: transparent;
+
+        &.match{
+            margin-left: auto;
+
+        }
+
+        &.clear{
+            margin-left: 1rem;
+        }
+
+        &:hover{
+            color: var(--desaturated-dark-cyan);
+            text-decoration: underline;
+        }
+
+    }
+
+}
+
+
+.job-listing{
+
+    .job{
+        display: flex;
+        margin: 1.6rem 0;
+        padding: 2rem;
+        border-left: 5px solid white;
+        border-radius: 5px;
+        transition: opacity .6s ease-out;
+        box-shadow: 0px 10px 20px 2px rgba(91, 164, 164, 0.2);
+        background-color: white;
+
+        &.hide{
+            opacity: .25;
+            pointer-events: none;
+        }
+
+        &:nth-child(1), &:nth-child(2){
+            border-left-color: var(--desaturated-dark-cyan);
+        }
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 1.5rem;
+
+            .company{
+
+                span{
+                    color: var(--desaturated-dark-cyan);
+                    margin-right: 10px;
+                    font-size: .9rem;
+                    font-weight: 700;
+                }
+
+                .pill{
+                    color: white;
+                    display: none;
+                    margin: 0 5px;
+                    padding: 7px 10px 5px;
+                    opacity: 0;
+                    font-size: .7rem;
+                    font-weight: 700;
+                    border-radius: 10000px;
+
+                    &.new, &.featured{
+                        opacity: 1;
+                        display: inline-block;
+                    }
+
+                    &.new{
+                        background-color: var(--desaturated-dark-cyan);
+                    }
+
+                    &.featured{
+                        background-color: var(--very-dark-grayish-cyan);
+                    }
+
+                }
+
+            }
+
+            .position{
+                color: var(--very-dark-grayish-cyan);
+                font-size: 1.2rem;
+
+                &:hover{
+                    color: var(--desaturated-dark-cyan);
+                }
+
+            }
+
+            .more{
+
+                span{
+                    color: var(--dark-grayish-cyan);
+
+                    &:nth-child(2){
+
+                        &:before, &:after{
+                            content: '•';
+                            margin: 0 1rem;
+                            // font-size: 2rem;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .tablets{
+            align-self: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: auto;
+            
+            .tablet{
+                color: var(--desaturated-dark-cyan);
+                cursor: pointer;
+                margin: .5rem;
+                padding: .6rem;
+                font-weight: 700;
+                border-radius: 5px;
+                background-color: var(--filter-tablets);
+
+                &:hover{
+                    color: white;
+                    background-color: var(--desaturated-dark-cyan);
+                }
+
+            }
+    
+        }
+
+        hr{
+            display: none;
+        }
+
+    }
+
+}
+
+footer{
+    color: var(--very-dark-grayish-cyan);
+    margin: 3rem;
+    line-height: 2;
+    text-align: center;
+}
