@@ -70,8 +70,8 @@ ul, li {
 }
 
 body {
-  background: -webkit-gradient(linear, left bottom, left top, from(#fff1eb), to(#ace0f9)) no-repeat center center/cover;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) no-repeat center center/cover;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff1eb), to(#ace0f9)) no-repeat center center/cover fixed;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) no-repeat center center/cover fixed;
 }
 
 @media screen and (min-width: 2378px) {
