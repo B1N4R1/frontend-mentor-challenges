@@ -1,0 +1,28 @@
+@keyframes fallDown {
+    0%{
+        transform: translate(0, calc(-100% - 171px)) rotateZ(-10deg);
+    }
+    100%{
+        transform: translate(-30px, -30px) rotateZ(-10deg);
+    }
+}
+
+@keyframes fallDown2 {
+    0%{
+        transform: translate(-30px, -30px) rotateZ(-10deg);
+    }
+    100%{
+        transform: translate(0, 0) rotateZ(0deg);
+    }
+}
+
+@keyframes fadeUp {
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

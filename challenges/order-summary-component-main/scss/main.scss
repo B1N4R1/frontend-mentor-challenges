@@ -1,6 +1,10 @@
+@import './keyframes';
+
+$bright-blue: #3829e0;
+
 :root{
     --pale-blue: hsl(225, 100%, 94%);
-    --bright-blue: rgb(56, 41, 224);
+    --bright-blue: hsl(245, 75%, 52%);
 
     --very-pale-blue: hsl(225, 100%, 98%);
     --desaturated-blue: hsl(224, 23%, 55%);
@@ -8,6 +12,10 @@
 
     --base-font-size: 16px;
 
+    --fallDown-duration: .5s;
+
+    --fallDown2-duration: .1s;
+    --fallDown2-delay: var(--fallDown-duration);
 }
 
 *, *::before, *::after{
@@ -19,19 +27,11 @@
     font-family: 'Red Hat Display', sans-serif;
 }
 
-a{
-    text-decoration: none;
-}
-
 img{
     display: block;
 }
 
 @media screen and (max-width: 374px) {
-
-    :root{
-        --base-font-size: 12px;
-    }
     
     main{
 
@@ -56,7 +56,19 @@ img{
 
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (max-width: 425px) {
+
+    :root{
+        --base-font-size: 12px;
+    }
+    
+    html body{
+        background-image: url("../images/pattern-background-mobile.svg");
+    }
+
+}
+
+@media screen and (min-width: 1920px) {
     
     :root{
         --base-font-size: 20px;
@@ -67,22 +79,29 @@ img{
 body{
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url("../images/pattern-background-desktop.svg") no-repeat top center/cover;
+    background: url("../images/pattern-background-desktop.svg") no-repeat top center/contain;
     background-color: var(--pale-blue);
 }
 
 main{
     margin: 15px;
-    max-width: 450px;
+    max-width: 28.125rem;
     overflow: hidden;
     border-radius: 25px;
     background-color: white;
+    animation: fallDown var(--fallDown-duration) forwards, fallDown2 var(--fallDown2-duration) var(--fallDown2-delay) forwards;
 }
 
-.hero img{
-    width: 100%;
+.hero {
+
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+
 }
 
 .summary{
@@ -100,6 +119,12 @@ main{
 
     .desc{
         color: var(--desaturated-blue);
+    }
+
+    .btn{
+        border: none;
+        cursor: pointer;
+        transition: color .2s ease-out, background-color .2s ease-out;
     }
 
     .plan{
@@ -128,12 +153,16 @@ main{
 
         .change{
             color: var(--bright-blue);
-            border: none;
             margin-left: auto;
             font-size: .9rem;
             font-weight: 700;
             text-decoration: underline;
             background-color: transparent;
+
+            &:hover{
+                color: lighten($color: $bright-blue, $amount: 10)
+            }
+
         }
 
     }
@@ -146,14 +175,31 @@ main{
         border-radius: 10px;
         box-shadow: 0px 20px 46px 0px rgba(56, 41, 224, .4);
         background-color: var(--bright-blue);
+
+        &:hover{
+            background-color: lighten($color: $bright-blue, $amount: 10)
+        }
+
     }
 
     .cancel{
         color: var(--desaturated-blue);
-        border: none;
         margin-top: 2.18rem;
         font-weight: 700;
         background-color: transparent;
+
+        &:hover{
+            color: var(--dark-blue);
+        }
+
     }
 
+}
+
+footer{
+    color: var(--dark-blue);
+    opacity: 0;
+    text-align: center;
+    line-height: 1.5;
+    animation: fadeUp 1s .7s forwards;
 }
