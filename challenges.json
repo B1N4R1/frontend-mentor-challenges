@@ -151,8 +151,22 @@
                 "js": true
             },
             "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/four-card-feature-section-master",
-            "frontend-mentor": "#",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/four-card-feature-section-with-animations-MwIe1-Fxq",
             "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/four-card-feature-section-master/"
+        },
+        {
+            "id": 12,
+            "title": "Job listings with filtering",
+            "progress": "Completed",
+            "date": "2021-08-08",
+            "languages": {
+                "html": true,
+                "css": true,
+                "js": true
+            },
+            "github": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/static-job-listings-master",
+            "frontend-mentor": "https://www.frontendmentor.io/solutions/job-listings-with-filtering-joboqhuts",
+            "live-site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/static-job-listings-master/"
         }
         
     ]
