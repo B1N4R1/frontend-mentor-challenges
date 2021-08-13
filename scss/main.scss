@@ -6,7 +6,7 @@
     --language-shadow: #5CA4A4; //#929EAD;
     --language-text-color: #5CA4A4; //#222222;
 
-    --new-label-bg: #EE5253;
+    --new-label-bg: #ee5253;
     --completed-label-bg: #EDF6F6; //#1DD1A1;
     --completed-label-color: #5CA4A4;
     --inprogress-label-bg: #FECA57;
@@ -150,6 +150,9 @@ body{
                 right: 110px;
                 z-index: 1;
                 visibility: hidden;
+                transform: scale(1);
+                box-shadow: 0 0 0 0 var(--new-label-bg);
+                animation: pulse 2s infinite;
                 background-color: var(--new-label-bg);
             }
 
