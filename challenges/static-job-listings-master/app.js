@@ -24,7 +24,7 @@ window.onload = () => {
             for (let i = 0; i < jobs.length; i++) {
                 const job = jobs[i];
     
-                console.log(job.style.cssText);
+                // console.log(job.style.cssText);
                 job.style.cssText = `opacity: 1; transform: translateX(0px); transition: opacity .6s ease-out, transform .5s ease-out ${delay}s;`;
 
                 delay += 0.1;
@@ -99,7 +99,7 @@ function createJobCard(job, translate) {
     tablets += `</section>`;
 
     const articleJob = `
-        <article class="job" data-tablets=${tabletsList} style="opacity: 0.15; transform: translateX(-${translate}px);">
+        <article class="job" data-tablets=${tabletsList} style="opacity: 0; transform: translateX(-${translate}px);">
             ${image}
             ${info}
             ${tablets}

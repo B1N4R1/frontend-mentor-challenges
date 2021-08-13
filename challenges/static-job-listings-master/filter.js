@@ -157,14 +157,12 @@ class FilterManager {
 
         const filtersCount = this.filterListElement.children.length;
 
-        this.filterListElement.parentElement.className = (filtersCount == 0) ? 'filters-wrapper' : 'filters-wrapper slide-in';
-
         if (filtersCount === 0) {
-            this.filterListElement.parentElement.className = 'filters-wrapper';
+            this.filterListElement.parentElement.className = 'filters-wrapper no-filters';
         }
         else{
 
-            this.filterListElement.parentElement.className = 'filters-wrapper slide-in';
+            this.filterListElement.parentElement.className = 'filters-wrapper';
 
             const jobs = this.jobsElement.children;
 
@@ -178,7 +176,19 @@ class FilterManager {
                     job.className = 'job';
                 }
                 else{
-                    job.className = 'job hide';
+                    
+                    if (job.className != 'job hide') {
+                        
+                        console.log(job);
+
+                        job.className = 'job close';
+
+                        setTimeout( () => {
+                            job.className = 'job hide';
+                        }, 300);
+                            
+                    }
+
                 }
     
             }
