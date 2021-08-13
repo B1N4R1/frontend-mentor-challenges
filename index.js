@@ -20,86 +20,69 @@ $.getJSON("challenges.json", function(json){
 
 function createChallengeCard(challenge){
 
-    const mainDIV = document.createElement("div");
-    const progress = challenge["progress"].replace(" ", "-").toLowerCase();
-    mainDIV.setAttribute("class", `challenge ${progress}`);
+    const challengeID = challenge["id"];
+    const progress = challenge["progress"];
+    const live_site = challenge["links"]["Live Site"];
 
-    const captionANCHOR = document.createElement("a");
-    captionANCHOR.setAttribute("href", `${challenge["live-site"]}`);
-    captionANCHOR.setAttribute("target", "_blank");
-    captionANCHOR.setAttribute("class", "caption");
-    captionANCHOR.setAttribute("rel", `noreferrer`);
-    captionANCHOR.setAttribute("data-progress", `${challenge["progress"]}`);
+    const caption = `                
+        <a href="${live_site}" target="_blank" class="caption" rel="noreferrer" data-progress="${progress}">
+            <img src="images/challenge-${challengeID}.jpeg" alt="challenge-${challengeID}" loading="lazy">
+        </a>`;
 
-    const captionIMG = document.createElement("img");
-    captionIMG.setAttribute("src", `images/challenge-${challenge["id"]}.jpeg`);
-    captionIMG.setAttribute("alt", `challenge-${challenge["id"]}`);
-    captionIMG.setAttribute("loading", "lazy");
-    
-    captionANCHOR.appendChild(captionIMG);
 
-    const heroDIV = document.createElement("div");
-    heroDIV.setAttribute("class", "hero");
+    const title = challenge["title"];
+    const date = challenge["date"];
 
-    const heroANCHOR = document.createElement("a");
-    heroANCHOR.setAttribute("href", `${challenge["live-site"]}`);
-    heroANCHOR.setAttribute("target", "_blank");
-    heroANCHOR.setAttribute("rel", `noreferrer`);
-    heroANCHOR.innerText = challenge["title"];
+    let hero = `                
+        <div class="hero">
+            <a href="${live_site}" target="_blank" rel="noreferrer">${title}</a>
+            <p class="date">${convertDate(date)}</p>
+            <ul class="languages">`;
 
-    const heroUL = document.createElement("ul");
-    heroUL.setAttribute("class", "languages");
+    const languages = challenge["languages"];
 
-    let languages = ["html", "css", "js"];
     languages.map(language => {
-        
-        const heroLI = document.createElement("li");
-        let className = (challenge["languages"][language]) ? `language ${language}` : `language ${language} hide`;
-        heroLI.setAttribute("class", `${className}`);
-        heroLI.innerText = language.toUpperCase();
+        hero += `<li class="language ${language}">${language.toUpperCase()}</li>`;
+    })
 
-        heroUL.appendChild(heroLI);
+    hero += `</ul>
+        </div>`;
 
-    });
+    let links = `<div class="links">`;
+    const linksData = challenge["links"];
 
-    const linksDIV = document.createElement("div");
-    linksDIV.setAttribute("class", "links");
+    for (const name in linksData) {
+        if (Object.hasOwnProperty.call(linksData, name)) {
+            const url = linksData[name];
+            
+            links += `<div class="link">
+                         <div class="link-icon"></div>
+                         <a href="${url}" rel="noreferrer" target="_blank" class="link-name">
+                             ${name}
+                         </a>  
+                      </div>`;
 
-    let links = ["GitHub", "Frontend Mentor", "Live Site"];
-    links.map(link => {
-
-        const linkDIV = document.createElement("div");
-        linkDIV.setAttribute("class", "link");
-
-        const linkICON = document.createElement("div");
-        linkICON.setAttribute("class", "link-icon");
-
-        let linkName = link.toLowerCase().replace(" ", "-");
-        const linkANCHOR = document.createElement("a");
-        linkANCHOR.setAttribute("href", `${challenge[linkName]}`);
-        linkANCHOR.setAttribute("rel", `noreferrer`);
-
-        if (challenge[linkName] != '#') {
-            linkANCHOR.setAttribute("target", "_blank");
         }
+    }
 
-        linkANCHOR.setAttribute("class", "link-name");
-        linkANCHOR.innerText = link;
+    links += `</div>`;
 
-        linkDIV.appendChild(linkICON);
-        linkDIV.appendChild(linkANCHOR);
+    const card = `<div class="challenge ${progress.toLowerCase()}">
+                      ${caption}
+                      ${hero}
+                      ${links}
+                  </div>`;
 
-        linksDIV.appendChild(linkDIV);
+    return card;
 
-    });
+}
 
-    heroDIV.appendChild(heroANCHOR);
-    heroDIV.appendChild(heroUL);
 
-    mainDIV.appendChild(captionANCHOR);
-    mainDIV.appendChild(heroDIV);
-    mainDIV.appendChild(linksDIV);
+function convertDate(date){
 
-    return mainDIV;
+    let curDate = new Date(date);
+    let newDate = curDate.toDateString();
+
+    return newDate;
 
 }

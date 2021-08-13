@@ -29,11 +29,12 @@
 }
 
 :root {
-  --language-bg: #BCC5CE;
-  --language-shadow: #929EAD;
-  --language-text-color: #222222;
+  --language-bg: #EDF6F6;
+  --language-shadow: #5CA4A4;
+  --language-text-color: #5CA4A4;
   --new-label-bg: #EE5253;
-  --completed-label-bg: #1DD1A1;
+  --completed-label-bg: #EDF6F6;
+  --completed-label-color: #5CA4A4;
   --inprogress-label-bg: #FECA57;
   --challenge-card-bg: #FFFFFF;
   --challenge-card-shadow: rgba(102, 102, 102, 0.25);
@@ -124,12 +125,14 @@ body {
 .challenges .challenge {
   overflow: hidden;
   border-radius: 10px;
-  -webkit-box-shadow: -4px 4px 0 var(--challenge-card-shadow);
-          box-shadow: -4px 4px 0 var(--challenge-card-shadow);
+  -webkit-box-shadow: 0px 0 35px var(--challenge-card-shadow);
+          box-shadow: 0px 0 35px var(--challenge-card-shadow);
   background-color: var(--challenge-card-bg);
 }
 
 .challenges .challenge.completed .caption::after {
+  color: var(--completed-label-color);
+  border: 1px solid;
   background-color: var(--completed-label-bg);
 }
 
@@ -201,6 +204,12 @@ body {
           text-decoration-color: var(--challenge-card-text-color);
 }
 
+.challenges .challenge .hero .date {
+  color: #929EAD;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
 .challenges .challenge .hero .languages {
   margin: 10px 0;
   display: -ms-grid;
@@ -216,18 +225,13 @@ body {
   font-size: 1.125rem;
   text-align: center;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 4px 0px var(--language-shadow);
-          box-shadow: 0px 4px 0px var(--language-shadow);
+  -webkit-box-shadow: 0px 0px 2px var(--language-shadow);
+          box-shadow: 0px 0px 2px var(--language-shadow);
   background: var(--language-bg);
 }
 
 .challenges .challenge .hero .languages .language.hide {
   visibility: hidden;
-}
-
-.challenges .challenge .hero .languages .language:hover {
-  -webkit-animation: languageButtonAnimation .5s forwards;
-          animation: languageButtonAnimation .5s forwards;
 }
 
 .challenges .challenge .links {
