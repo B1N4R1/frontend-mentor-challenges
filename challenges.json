@@ -143,6 +143,18 @@
                 "Frontend Mentor": "https://www.frontendmentor.io/solutions/job-listings-with-filtering-joboqhuts",
                 "Live Site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/static-job-listings-master/"   
             }
+        },
+        {
+            "id": 13,
+            "title": "GitHub user search app",
+            "progress": "Completed",
+            "date": "2021-09-28",
+            "languages": ["html", "css", "js"],
+            "links": {
+                "GitHub": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/github-user-search-app",
+                "Frontend Mentor": "https://www.frontendmentor.io/solutions/github-user-search-app-hBYQqw56a",
+                "Live Site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/github-user-search-app/"   
+            }
         }
         
     ]
