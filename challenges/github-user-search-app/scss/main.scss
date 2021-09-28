@@ -1,0 +1,300 @@
+@import './base';
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+        color: var(--logo-color);
+        font-size: 1.625rem;
+        font-weight: 700;
+    }
+
+    .theme-toggle{
+        color: var(--theme-toogle-color);
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        
+        path{
+            fill: var(--theme-toogle-color);
+        }
+
+        &:hover{
+            --theme-toogle-color: var(--theme-toogle-hover-color);
+            
+            path{
+                fill: var(--theme-toogle-color);
+            }
+
+        }
+
+        span{
+            font-size: 0.8125rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+        }
+
+    }
+
+}
+
+main{
+    margin: 2.25rem 0;
+
+    .search-bar{
+        display: flex;
+        align-items: center;
+        gap: var(--search-grid-gap);
+        margin: 0 0 1.5rem;
+        padding: .625rem;
+        border-radius: 15px;
+        box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, var(--shadow-opacity));
+        background-color: var(--card-bg);
+
+        .icon-search{
+            margin-left: var(--icon-search-ml);
+            align-self: center;
+        }
+
+        input{
+            color: var(--logo-color);
+            border: none;
+            outline: none;
+            caret-color: var(--caret-color);
+            width: 100%;
+            font-size: var(--input-fs);
+            font-weight: 400;
+            line-height: 25px;
+            background-color: transparent;
+
+            &::placeholder{
+                color: var(--body-color);
+            }
+
+        }
+
+        .no-results{
+            color: var(--no-results-color);
+            display: none;
+            font-weight: 700;
+            white-space: nowrap;
+
+            &.show{
+                display: block;
+            }
+
+        }
+
+        .search-btn{
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 12px 24px;
+            font-size: var(--h3-fs);
+            font-weight: 700;
+            border-radius: 10px;
+            background-color: var(--search-btn-bg);
+
+            &:hover{
+                --search-btn-bg: #60ABFF;
+                //background-color: var(--search-btn-bg);
+            }
+
+        }
+
+    }
+
+    .card{
+        color: var(--body-color);
+        padding: var(--card-padding);
+        display: grid;
+        grid-row-gap: 1rem;
+        grid-column-gap: var(--profile-image-left-gap);
+        grid-template-areas: "image user"
+                             "image info";
+        grid-template-columns: min-content 1fr;
+        border-radius: 15px;
+        box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, var(--shadow-opacity));
+        background-color: var(--card-bg);
+
+        .avatar{
+            grid-area: image;
+
+            img{
+                max-width: 117px;
+                border-radius: 50%;
+            }
+
+        }
+
+        .user{
+            grid-area: user;
+            display: grid;
+            align-items: center;
+            justify-content: space-between;
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: repeat(2, auto);
+
+            .name{
+                color: var(--name-color);
+            }
+
+            .username{
+                color: var(--link-color);
+                font-size: var(--h3-fs);
+                line-height: var(--h3-lh);
+                text-decoration: none;
+            }
+
+            .date{
+                color: var(--body-color);
+                font-size: var(--body-fs);
+                line-height: var(--body-lh);
+                font-weight: 400;
+            }
+
+        }
+
+        .info{
+            grid-area: info;
+
+            .stats{
+                display: flex;
+                justify-content: space-around;
+                margin: 2rem 0;
+                padding: 2rem;
+                border-radius: 15px;
+                background-color: var(--stats-bg);
+
+                .stat{
+                    
+                    &_name{
+                        margin-bottom: .5rem;
+                        text-transform: capitalize;
+                    }
+
+                    &_amount{
+                        color: var(--stat-amount-color);
+                        text-align: center;
+                    }
+
+                }
+
+            }
+
+            .personal{
+                color: var(--body-color);
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-columns: repeat(auto-fit, 200px);
+
+                &_item{
+                    display: flex;
+                    gap: 1.25rem;
+                    align-items: center;
+
+                    svg{
+                        min-width: 20px;
+
+                        path{
+                            fill: var(--body-color);
+                        }
+
+                    }
+
+
+                    &_name{
+                        font-size: var(--body-fs);
+                        line-height: var(--body-lh);
+                    }
+
+                    &:not(.unavailable) .personal_item_name:hover{
+                        text-decoration: underline;
+                    }
+
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    .container {
+
+        main {
+
+            .card {
+                grid-template-areas: "image user"
+                                     "image user"
+                                     "info info";
+
+                .user{
+                    grid-template-rows: repeat(3, auto);
+                    grid-template-columns: unset;
+
+                    .date{
+                        grid-row: 3;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    
+    .container {
+
+        header, main {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 375px){
+
+    .container{
+
+        .card .avatar img{
+            width: 70px;
+        }
+
+
+        .search-bar{
+
+            .icon-search{
+                width: 20px;
+            }
+
+            input{
+                font-size: 0.8125rem;
+            }
+
+            .search-btn{
+                padding: 12px 16px;
+            }
+
+        }
+
+    }
+
+}
