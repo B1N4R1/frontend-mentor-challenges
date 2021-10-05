@@ -155,6 +155,18 @@
                 "Frontend Mentor": "https://www.frontendmentor.io/solutions/github-user-search-app-hBYQqw56a",
                 "Live Site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/github-user-search-app/"   
             }
+        },
+        {
+            "id": 14,
+            "title": "Order summary component",
+            "progress": "Completed",
+            "date": "2021-10-05",
+            "languages": ["html", "css"],
+            "links": {
+                "GitHub": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/order-summary-component-main",
+                "Frontend Mentor": "#",
+                "Live Site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/order-summary-component-main/"   
+            }
         }
         
     ]
