@@ -1,0 +1,67 @@
+$bright-blue: #3829e0;
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --base-font-size: 16px;
+
+    --fallDown-duration: .5s;
+
+    --fallDown2-duration: .1s;
+    --fallDown2-delay: var(--fallDown-duration);
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    box-sizing: border-box;
+    font-size: var(--base-font-size);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+img{
+    display: block;
+}
+
+@media screen and (max-width: 374px) {
+    
+    main{
+
+        .summary{
+
+            .plan{
+                flex-direction: column;
+
+                .info{
+                    margin: 1rem 0;
+                }
+
+                .change{
+                    margin: 0;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    :root{
+        --base-font-size: 12px;
+    }
+    
+    html body{
+        background-image: url("../images/pattern-background-mobile.svg");
+    }
+
+}

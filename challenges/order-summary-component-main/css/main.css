@@ -118,12 +118,6 @@ img {
   }
 }
 
-@media screen and (min-width: 1920px) {
-  :root {
-    --base-font-size: 20px;
-  }
-}
-
 body {
   min-height: 100vh;
   display: -webkit-box;
