@@ -167,6 +167,18 @@
                 "Frontend Mentor": "https://www.frontendmentor.io/solutions/order-summary-component-gUwA0fdyz",
                 "Live Site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/order-summary-component-main/"   
             }
+        },
+        {
+            "id": 15,
+            "title": "QR code component",
+            "progress": "Completed",
+            "date": "2022-07-17",
+            "languages": ["html", "css"],
+            "links": {
+                "GitHub": "https://github.com/B1N4R1/frontend-mentor-challenges/tree/main/challenges/qr-code-component-main",
+                "Frontend Mentor": "#",
+                "Live Site": "https://b1n4r1.github.io/frontend-mentor-challenges/challenges/qr-code-component-main/"
+            }
         }
         
     ]
