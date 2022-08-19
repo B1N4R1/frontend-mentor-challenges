@@ -24,9 +24,11 @@ img {
 .container {
   width: 100%;
   max-width: 320px;
-  display: flex;
-  flex-direction: column;
+  margin: 24px;
   padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
   border-radius: 20px;
   background-color: white;
 }
@@ -34,28 +36,27 @@ img {
   width: 100%;
   border-radius: 10px;
 }
-.container .desc {
-  margin: 1rem 0.5rem;
+.container h1 {
+  color: hsl(218deg, 44%, 22%);
+  font-size: 1.5rem;
   text-align: center;
 }
-.container .desc h1 {
-  color: hsl(218deg, 44%, 22%);
-  margin: 0 0 1rem;
-  font-size: 1.5rem;
-}
-.container .desc p {
+.container p {
   color: hsl(220deg, 15%, 55%);
+  margin: 0 1rem;
+  text-align: center;
 }
 
-.attribution {
+footer {
+  margin: 0 32px;
+}
+footer .attribution {
   color: hsl(218deg, 44%, 22%);
-  margin: 0 30px;
   font-size: 1rem;
   text-align: center;
   line-height: 1.5;
   letter-spacing: 1px;
 }
-
-.attribution a {
+footer .attribution a {
   font-size: inherit;
 }
